@@ -3,7 +3,8 @@ description: Documentation and guides for modding Persona Games
 theme: just-the-docs
 color_scheme: dark
 
-url: https://just-the-docs.github.io
+url: https://animatedswine37.github.io
+baseurl: /persona-modding-docs/
 
 plugins: 
   - jekyll-tabs
