@@ -50,7 +50,7 @@ It's recommended to dump both the main files and the English files at least to s
 
 After you've dragged your desired CPK into CriFsLib Extractor you'll be able to see the names of all files inside and either extract selected or all files. Right click any file, click **Extract All** and select an appropriate folder; after a little bit all of the files will be extracted into it.
 
-![](../../assets/images/getting-started/crifs-extract-all.png)
+![]({{ site.baseurl }}/assets/images/getting-started/crifs-extract-all.png)
 
 ## Extracting Archives
 
@@ -60,7 +60,7 @@ When you look through your extracted files you'll find there are many large `bin
 
 The easiest way to extract files from these archives is [Amicitia](https://github.com/tge-was-taken/Amicitia/releases/latest). Download the `Release.7z` and extract it somewhere appropriate. When you open a file in Amicitia, if it is a valid archive you'll see a tree of files that you can export or replace by right-clicking on them.
 
-![](../../assets/images/getting-started/amicitia.png)
+![]({{ site.baseurl }}/assets/images/getting-started/amicitia.png)
 
 ### Command Line
 Although Amicitia is the most user friendly, it's not good for batch extracting files as you can only select one at a time. If you need to perfom batch operations you can download [PackTools](https://github.com/tge-was-taken/AtlusFileSystemLibrary/releases/latest).
@@ -85,4 +85,4 @@ The final way to extract files is using [PAKPack-Registry](https://github.com/LT
 
 Now whenever you right-click a file you'll have a **PAKPack** option at the top of the menu which can be used to extract the PAK.
 
-![](../../assets/images/getting-started/pak-context.png)
+![]({{ site.baseurl }}/assets/images/getting-started/pak-context.png)
