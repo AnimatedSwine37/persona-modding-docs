@@ -9,7 +9,9 @@ plugins:
   - jekyll-tabs
 
 aux_links:
-  Template Repository: https://github.com/just-the-docs/just-the-docs-template
+  Discord Server: https://discord.gg/naoto  
+  Amicitia Wiki: https://amicitia.miraheze.org/wiki/
+  GitHub Repository: https://github.com/AnimatedSwine37/persona-modding-docs
 
 callouts:
   warning:
