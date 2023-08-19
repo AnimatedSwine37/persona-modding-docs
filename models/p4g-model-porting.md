@@ -12,4 +12,4 @@ has_children: true
 Universal
 {: .label .label-green } 
 
-In the following sections will eventually be information on making model imports and stuff I hope.
+In this section we'll cover various methods for model imports to Persona 4 Golden.
