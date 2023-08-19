@@ -3,7 +3,7 @@ title: SMT V Models
 layout: page
 nav_order: 1
 grand_parent: Models
-parent: P4G Model Porting Tutorials
+parent: P4G Model Porting
 ---
 
 # 👿 SMT V Models
