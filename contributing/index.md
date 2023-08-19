@@ -25,19 +25,19 @@ These docs are open-source and community driven. Any contributions are appreicat
 ## Setting Up The Fork
 First you'll need to [fork the repo](https://github.com/AnimatedSwine37/persona-modding-docs/fork), this will act as your own copy of it that you can freely change. 
 
-![]({{ site.baseurl }}/assets/images/contributing/fork.png)
+![]({%link assets/images/contributing/fork.png %})
 
 Now you should clone the fork to your computer so you can work on it locally. If you've not worked with GitHub before, the [Github Desktop](https://desktop.github.com/) app is a fairly user-friendly way of doing so. Just click **Code** and then **Open with Github Desktop** on your fork's page.
 
-![]({{ site.baseurl }}/assets/images/contributing/clone-web.png)
+![]({%link assets/images/contributing/clone-web.png %})
 
 Assuming you've installed Github Desktop and signed you're into it, it will open and ask you where you want to clone the repo to. Select an appropriate folder and click **Clone**.
 
-![]({{ site.baseurl }}/assets/images/contributing/clone-desktop.png)
+![]({%link assets/images/contributing/clone-desktop.png %})
 
 When asked how you're using this fork say **To contribute to the parent project**.
 
-![]({{ site.baseurl }}/assets/images/contributing/fork-use.png)
+![]({%link assets/images/contributing/fork-use.png %})
 
 Now you've cloned your fork to your computer! You can see the files by clicking **Show in Explorer**.
 
@@ -105,11 +105,11 @@ This specifies a type of layout the page should use, for the purposes of this do
 {% tab front-matter parent %}
 If a page has a parent you put the name of it here 
 
-For example [Getting Started]({{site.baseurl}}/getting-started/getting-started) is the parent of [Extracting The Game's Files]({{site.baseurl}}/getting-started/extracting-files).
+For example [Getting Started]({%link getting-started/index.md %}) is the parent of [Extracting The Game's Files]({%link getting-started/extracting-files.md %}).
 {% endtab %}
 
 {% tab front-matter has_children %}
-`true` if the page will have children, use this for pages that have sub-pages like [Getting Started]({{site.baseurl}}/getting-started/getting-started).
+`true` if the page will have children, use this for pages that have sub-pages like [Getting Started]({%link getting-started/index.md %}).
 {% endtab %}
 
 {% tab front-matter nav_order %}
@@ -131,8 +131,17 @@ Below I'll list some common UI elements you might want to add to your page. Note
 To add an image, firstly place your file in the `assets/images` folder (if appropriate please use subfolders in there for organisation). Then add the following to your page:
 
 ``` 
-![]({% raw %}{{ site.baseurl }}{% endraw %}/assets/images/my-image.png)
+![]({% raw %}{%link assets/images/my-image.png %}{% endraw %})
 ```
+
+### Internal Links
+Sometimes you'll need to link to other pages on this site, to do so use the following syntax:
+
+```
+[Getting Started]({% raw %}{%link getting-started/index.md %}{% endraw %})
+```
+
+Which will give you a link like [Getting Started]({%link getting-started/index.md %}).
 
 ### Callouts
 Callouts can be used to bring attention to something important like so
@@ -244,21 +253,21 @@ Once you've made some changes you'll need to commit and push them for them to sh
 {% tab commit vs code %}
 In VS Code you can access Git by clicking on the source control tab on the left toolbar (the third option). In here you will see all of the files you've changed, to commit them first stage the files you want to by clicking on the `+` next to them. Then enter a commit message (like "Add dummy code page") and click **Commit**.
 
-![]({{ site.baseurl }}/assets/images/contributing/commit-vscode.png)
+![]({%link assets/images/contributing/commit-vscode.png %})
 
 After you've commited all of the changes you want to (you can split your changes into multiple commits if you wish) you neeed to push them to GitHub. Click **Sync Changes** to do so
 
-![]({{ site.baseurl }}/assets/images/contributing/push-vscode.png)
+![]({%link assets/images/contributing/push-vscode.png %})
 
 {% endtab %}
 
 {% tab commit github desktop %}
 When opening up GitHub Desktop you'll see all of the changes you've made. Tick all of the files you want to commit, enter a summary (like "Add dummy code page"), and if you want to, a more detailed description, then click **Commit to main**.
 
-![]({{ site.baseurl }}/assets/images/contributing/commit-desktop.png)
+![]({%link assets/images/contributing/commit-desktop.png %})
 
 After you've commited all of the changes you want to (you can split your changes into multiple commits if you wish) you neeed to push them to GitHub. Click **Push origin** to do so
-![]({{ site.baseurl }}/assets/images/contributing/push-desktop.png)
+![]({%link assets/images/contributing/push-desktop.png %})
 
 {% endtab %}
 {% endtabs %}
@@ -267,11 +276,11 @@ Now that you've pushed your changes to GitHub you'll see that your fork is some 
 
 Assuming that you're done making changes you can now open a pull request which essentially asks the main repo to add your changes to it. To do so click the **Contribute** button and then **Open pull request**.
 
-![]({{ site.baseurl }}/assets/images/contributing/make-pr.png)
+![]({%link assets/images/contributing/make-pr.png %})
 
 After you do so you'll be taken to a page where you need to enter some details about your pull request. The title should be a very general overview like "Added a music guide" and the description should be more detailed, if there's anything important to know about the changes please put it here. After filing the page in click **Create pull request** and you're done.
 
-![]({{ site.baseurl }}/assets/images/contributing/pr-details.png)
+![]({%link assets/images/contributing/pr-details.png %})
 
 The final thing to do is wait, the pr will be manually reviewed by someone (probably me, AnimatedSwine) and if everything's good it'll be merged into main for everyone to see. 
 
