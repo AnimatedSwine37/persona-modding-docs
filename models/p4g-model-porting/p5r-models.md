@@ -3,8 +3,10 @@ title: P5R Models
 layout: page
 nav_order: 5
 grand_parent: Models
-parent: P4G Model Porting Tutorials
+parent: P4G Model Porting
 ---
+
+# 🎭 P5R Models
 
 <details open markdown="block">
   <summary>
@@ -14,8 +16,6 @@ parent: P4G Model Porting Tutorials
 1. TOC
 {:toc}
 </details>
-
-# 🎭 P5R Models
 
 ## Required tools
 
@@ -41,9 +41,9 @@ P5R Persona models are located at model/character/persona, you can find which ID
 Next, open up GFD studio and drag your .GMD file inside to verify it's the one you want to work with. Also, drag the corresponding .GAP file inside to check its animations.
 
 
-![]({%link /assets/images/models/p5r-models/gfd studio preview 1.png %})
+![]({%link /assets/images/models/p5r-models/gfd studio preview 1.png %}){: .center-image }
 
-![]({%link /assets/images/models/p5r-models/gfd studio preview 2 anim.png %})
+![]({%link /assets/images/models/p5r-models/gfd studio preview 2 anim.png %}){: .center-image }
 
 To move the camera position, hold the middle mouse button and drag to move. To rotate the camera position, hold Alt and then drag along to rotate.
 
@@ -57,7 +57,7 @@ Open 3DS Max.
 
 Click Script > Run Script > then open the 3DS Max Import Script, a new window should pop up that looks like this:&#x20;
 
-![]({%link /assets/images/models/p5r-models/gmd import script window.png %})
+![]({%link /assets/images/models/p5r-models/gmd import script window.png %}){: .center-image }
 
 Click Import File.
 
@@ -67,29 +67,29 @@ Click Load Model in 3DS Max.
 
 Your model will be rotated along the floor, let's fix that.
 
-![]({%link /assets/images/models/p5r-models/base model viewport.png %})
+![]({%link /assets/images/models/p5r-models/base model viewport.png %}){: .center-image }
 
 Move over to the left side and select the bone named "Root"
 
-![]({%link /assets/images/models/p5r-models/p5r root bone.png %})
+![]({%link /assets/images/models/p5r-models/p5r root bone.png %}){: .center-image }
 
 Next, move up to the top and right click the rotate option shown here:
 
-![]({%link /assets/images/models/p5r-models/p5r rotate selection.png %})
+![]({%link /assets/images/models/p5r-models/p5r rotate selection.png %}){: .center-image }
 
 Next, adjust the X and Z values so that the model is facing up and towards the back of the scene. The easiest way to do is to set the X value to 0, and the Z value to 180. Your viewport should look like this:
 
-![]({%link /assets/images/models/p5r-models/correct model viewport rotation.png %})
+![]({%link /assets/images/models/p5r-models/correct model viewport rotation.png %}){: .center-image }
 
 Now, let's export this base model. Move up to the top and select File > Export > Export
 
-![]({%link /assets/images/models/p5r-models/file export.png %})
+![]({%link /assets/images/models/p5r-models/file export.png %}){: .center-image }
 
 I recommend naming the exported file something like the name of the Persona followed by what it is. In this case, I'd export the file as something like, "fafnir model.fbx"
 
 In the export options, set the options to "ASCII" and "FBX 2009" then export your base model somewhere safe. 
 
-![]({%link /assets/images/models/p5r-models/export options.png %})
+![]({%link /assets/images/models/p5r-models/export options.png %}){: .center-image }
 
 Done? Now we can carry on with animations.
 
@@ -99,7 +99,7 @@ Go back to the Import Script and select "Import File" then select the bps file i
 
 This will bring up an option to select Animation Index, these values match what are shown in GFD Studio.
 
-![]({%link /assets/images/models/p5r-models/import script load animation.png %})
+![]({%link /assets/images/models/p5r-models/import script load animation.png %}){: .center-image }
 
 {: .info }
 > Here's a handy cheat sheet for working with Persona 5 Royal models.
@@ -116,7 +116,7 @@ Your model will return to it's original rotation, this is intentional so carry o
 
 After an animation is selected, verify that it's working by pressing the Play button near the bottom, as shown here:
 
-![]({%link /assets/images/models/p5r-models/play animation button location.png %})
+![]({%link /assets/images/models/p5r-models/play animation button location.png %}){: .center-image }
 
 Once you've verified that the animation is playing correctly, rotate the model again.
 
@@ -124,37 +124,39 @@ The same information applies here like before, select the root bone on the left,
 
 You should have a viewport like this:
 
-![]({%link /assets/images/models/p5r-models/correctly rotated viewport.png %})
+![]({%link /assets/images/models/p5r-models/correctly rotated viewport.png %}){: .center-image }
 
 Once you've got the desired rotation, you'll need to export the model again with the same settings as last time.
 
 Repeat these steps for the remaining animations.
 
+Next, we'll go over an optional addition you can add to increase the quality of your model.
+
 ## Smooth Magic Animation (Optional)
 
-This next part is entirely optional, but it's an added bonus. In this section, I'll describe how to merge animations 6-10 to create a fluid Magic animation like in P5R. 
+This next part is entirely optional, but it's an added bonus. In this section, I'll describe how to merge animations 6-10 to create a fluid Magic animation, just like in P5R. 
 
-If you're not interested in a smoother animation, or are just interested in saving time, Animations 8 or 9 can provide the same effect on their own.
+If you're not interested in a smoother animation, or are just interested in saving time, Animation 7 can provide the same effect on it's own.
 
 First, in the GMD Import script, unselect Reset Animation on Load.
 
-![]({%link /assets/images/models/p5r-models/smooth magic anim import script options.png %})
+![]({%link /assets/images/models/p5r-models/smooth magic anim import script options.png %}){: .center-image }
 
 Next, select Animation Index 6 and click Load Animation. The model will be rotated along the floor again, but we won't fix this until the very end.
 
 After that, go to the time configuration option shown here:
 
-![]({%link /assets/images/models/p5r-models/configure frame end start option.png %})
+![]({%link /assets/images/models/p5r-models/configure frame end start option.png %}){: .center-image }
 
 In the Start Time, set the value to a negative number above 100, like this:
 
-![]({%link /assets/images/models/p5r-models/frame start value shown.png %})
+![]({%link /assets/images/models/p5r-models/frame start value shown.png %}){: .center-image }
 
 You may need to set this number higher later on depending on the number of frames.
 
-Now, highlight all the bones on the left, then select all the key frames shown at the bottom and move them to the very beginning of the animation timing.
+Now, highlight all the bones on the left. Triple check that all bones are seleted or you may have issues with the animation later. Next, select all the key frames shown at the bottom and move them to the very beginning of the animation timing, like this:
 
-![]({%link /assets/images/models/p5r-models/shown negative frame keys.png %})
+![]({%link /assets/images/models/p5r-models/shown negative frame keys.png %}){: .center-image }
 
 Once it's moved, go back to the Import Script again and now load Animation 8. Your frame timings will disappear, but they're still there. Go back to the Time Configuration screen and extend the Start Time to the same value as before.
 
@@ -164,7 +166,7 @@ Once it's moved, go back to the Import Script again and now load Animation 8. Yo
 
 Move these new frames to the end of your previous animation.
 
-![]({%link /assets/images/models/p5r-models/shown merged frame keys.png %})
+![]({%link /assets/images/models/p5r-models/shown merged frame keys.png %}){: .center-image }
 
 Repeat these steps for Animations 9, and 10.
 
@@ -178,14 +180,14 @@ Now, play your animation to verify that everything worked as intended.
 
 You should end up with frame keys that look like this:
 
-![]({%link /assets/images/models/p5r-models/final merged keyframes.png %})
+![]({%link /assets/images/models/p5r-models/final merged keyframes.png %}){: .center-image }
 
 {: .info }
 > Getting weird animation behavior when played?
 >
 > Verify that all bones in all trees are selected during the process. You may need to right click in the bones and expand all of them, then press CTRL+A to select them all.
 
-Once you've verified that it's working and are satisfied with the result, rotate your model like before, upright and facing towards the back of the scene. Once that's done, export the same way as before.
+Once you've verified that it's working and are satisfied with the result, rotate your model like before, upright and facing towards the back of the scene. Once that's done, export the same way as before. Save the model in the same location as the other models.
 
 ## Model Converting
 
@@ -199,13 +201,15 @@ This command does several things, so let's break it down into something understa
 
 First, it converts all of the fbx files into GMO files for use in P4G.
 
-Next, it merges all of the animation models into the first model.
+Next, it merges all of the animation data into the first model.
 
 Finally, it extracts that model as a GMS for easy editing.
 
-Let's verify that the process went over smoothly by opening up our GMO in GMOView. Press 2 on your keyboard to open up the animation config and flick through them to ensure that the process went over smoothly. Here's an example of what I mean:
+Let's verify that the process went over smoothly by opening up our GMO in GMOView. 
 
-![]({%link /assets/images/models/p5r-models/animation conversion bad and good.png %})
+Once open, press 2 on your keyboard to open up the animation config and flick through them using the arrow keys to ensure that the process went over smoothly. Here's an example of what I mean:
+
+![]({%link /assets/images/models/p5r-models/animation conversion bad and good.png %}){: .center-image }
 
 &#x20;You should have a total of 5 animations, the first 4 being Phys and Skill repeated twice, and the last one being an Idle position for use in the Compendium.
 
@@ -219,17 +223,19 @@ While converting with gmoconv, you may have noticed it was throwing out errors a
 > For Vita users, you'll need to take an extra step to prevent crashes on original hardware. Instead of converting DDS directly to TM2, first, convert the DDS to PNG, halve the resolution, then convert the PNG to TM2.
 
 Let's check which of the DDS files are actually necessary for the model. Open up your GMS file in a text editor of choice and look for the texture location. For easier navigation, press CTRL+F on your keyboard and then search for this string:
-`Texture "`
+```
+Texture "
+```
 
 It should point to a texture location similar to this:
 
-![]({%link /assets/images/models/p5r-models/old texture name location.png %})
+![]({%link /assets/images/models/p5r-models/old texture name location.png %}){: .center-image }
 
 Take note of which textures are mentioned here, as those are the only ones that are actually required for conversion / importing.
 
 Once located, change the extension to .TM2 and carry on. Your file should look something like this:
 
-![]({%link /assets/images/models/p5r-models/new texture name location.png %})
+![]({%link /assets/images/models/p5r-models/new texture name location.png %}){: .center-image }
 
 Now that we've located and defined which textures are required, let's convert them to TM2.
 
@@ -238,7 +244,7 @@ Next, open a command prompt at the location where gimconv is located and pass an
 gimconv 'path to dds' -o 'output path for new tm2'
 ```
 
-Once converted, go back to your GMS file and change the path if needed.
+Once converted, go back to your GMS file and change the path if needed. You'll want to make sure that the path shown in the GMS actually contains the .TM2 file or else it won't be applied to the model.
 
 Next, we'll need to convert our GMS file back into a GMO via these two methods.
 
@@ -258,7 +264,7 @@ sadoaiya (path to gms)
 
 With your newly made GMO, check it again in GMOView. Assuming the process went right, your model should now be fully textured. If you missed any during the editing process, GMOView will let you know with a warning on the left, like this"
 
-![]({%link /assets/images/models/p5r-models/missing texture warning.png %})
+![]({%link /assets/images/models/p5r-models/missing texture warning.png %}){: .center-image }
 
 Once you've verified that the model has all the necessary textures, you'll need to convert the GMO into an AMD for testing in game. Pass a command like either of these to do so.
 
@@ -292,13 +298,13 @@ Testing in game is the final part of getting models to work properly. You're goi
 
 Here are a few visual examples of what I mean:
 
-![]({{ site.baseurl }}/assets/images/models/smt-v-models/scaling comp example.png)
+![]({%link /assets/images/models/smt-v-models/scaling comp example.png %}){: .center-image }
 *Example of good and bad compendium scaling and positioning. You want to aim for the image on the right where the Persona takes up as much of the empty space.*
 
-![]({{ site.baseurl }}/assets/images/models/smt-v-models/pos battle example.jpg)
+![]({%link /assets/images/models/smt-v-models/pos battle example.jpg %}){: .center-image }
 *Example of bad battle positioning, take note of the model clipping into the floor, you don't want that.*
 
-![]({{ site.baseurl }}/assets/images/models/smt-v-models/model errors example.gif)                                                                       
+![]({%link /assets/images/models/smt-v-models/model errors example.gif %}){: .center-image }                                                                 
 *Example of irregular model performance. This is typically caused by missing blend subsets.*
 
 Once you've checked all of these, and can verify that they are working perfectly, **congrats!** You've successfully ported a model from P5R!.

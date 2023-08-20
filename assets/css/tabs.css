@@ -55,3 +55,8 @@
 .tab-content>li.active {
     display: initial;
 }
+
+.center-image {
+    margin: 0 auto;
+    display: block;
+}
