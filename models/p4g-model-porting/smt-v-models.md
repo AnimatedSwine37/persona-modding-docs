@@ -174,7 +174,7 @@ Once you're done applying the textures, you can move on to exporting the model.
 
 ## Exporting the model.
 
-Once satisfied with how the model looks, you’ll need to export with a few specific settings. Export as the settings "ASCII" and "FMX 2009." Save to somewhere safe and findable.
+Once satisfied with how the model looks, you’ll need to export with a few specific settings. Export as the settings "ASCII" and "FBX 2009." Save to somewhere safe and findable.
 
 ![]({{ site.baseurl }}/assets/images/models/smt-v-models/export.png)
 
@@ -271,7 +271,7 @@ sadoaiya (path to gmo) -A
 
 Just to play on the safe side, you should be optimizing your models with Sadoaiya to ensure that no potential issues came up during the porting process. 
 
-In our case, the model has an issue with Vertex colors, so let's remove that before testing in-game. Pass a command like this to remove vertex colors in Sadoaiya:\
+In our case, the model has an issue with Vertex colors, so let's remove that before testing in-game. Pass a command like this to remove vertex colors in Sadoaiya:
 ```
 Sadoaiya -C (path to your AMD)
 ```
@@ -296,8 +296,8 @@ Here are a few visual examples of what I mean:
 ![]({{ site.baseurl }}/assets/images/models/smt-v-models/pos battle example.jpg)
 *Example of bad battle positioning, take note of the model clipping into the floor, you don't want that.*
 
-![]({{ site.baseurl }}/assets/images/models/smt-v-models/model errors example.gif)
-*Example of irregular model performance.*
+![]({{ site.baseurl }}/assets/images/models/smt-v-models/model errors example.gif)                                                                       
+*Example of irregular model performance. This is typically caused by missing blend subsets.*
 
 Once you've checked all of these, and can verify that they are working perfectly, **congrats!** You've successfully ported a model from SMT V.
 
