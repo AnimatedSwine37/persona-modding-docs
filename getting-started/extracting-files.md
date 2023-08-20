@@ -63,7 +63,7 @@ The easiest way to extract files from these archives is [Amicitia](https://githu
 ![]({{ site.baseurl }}/assets/images/getting-started/amicitia.png)
 
 ### Command Line
-Although Amicitia is the most user friendly, it's not good for batch extracting files as you can only select one at a time. If you need to perfom batch operations you can download [PackTools](https://github.com/tge-was-taken/AtlusFileSystemLibrary/releases/latest).
+Although Amicitia is the most user friendly, it's not good for batch extracting files as you can only select one at a time. If you need to perform batch operations you can download [PackTools](https://github.com/tge-was-taken/AtlusFileSystemLibrary/releases/latest).
 
 Running it without any arguments will give you some help information. The command you'll likely want to use is `unpack` to extract files from an archive. For example, a simple command to extract all .bin files in a folder (and subfolders) is:
 
