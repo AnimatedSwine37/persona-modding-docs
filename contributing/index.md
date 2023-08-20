@@ -59,7 +59,7 @@ bundle install
 {: .info }
 > On Windows you may need to run the terminal as Administrator for this to work
 
-Now you're ready to run the site, to do sorun the following command:
+Now you're ready to run the site, to do so run the following command:
 
 ```
 bundle exec jekyll serve
