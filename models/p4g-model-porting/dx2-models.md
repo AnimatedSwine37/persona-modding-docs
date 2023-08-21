@@ -41,9 +41,11 @@ First, let's open up our model in Noesis to check if we have the right one. For 
 
 ![]({%link /assets/images/models/dx2-models/noesis view.png %})
 
-Once opened, right click the model in the center and click Export.
+Once opened, right click the model labeled "scale.fbx" and click Export.
 
-In this window we'll need to set a few options. First, set the Additional Animation Output value to "Multi-FBX Anim Sequence" then set these options in the export settings.
+In this window we'll need to set a few options. 
+
+First, set the Additional Animation Output value to "Multi-FBX Anim Sequence" then set these options in the export settings.
 
 ```
 -fbxoldexport -rotate 0 0 180 -bakeanimscale -bmoda -scale 140
@@ -73,7 +75,7 @@ The model will not contain any mesh data, just the animation of the bones. The m
 
 If you encounter an animation that isn't animated and stays in an A pose, then you can disregard it and continue with the other existing version of the same animation.
 
-Now, let's move onto importing animations.
+Now, let's move onto importing those animations.
 
 ## Importing Animations
 
@@ -96,7 +98,7 @@ Once finished, open up GMOView and check your model.
 
 ![]({%link /assets/images/models/dx2-models/untextured andy.png %})
 
-Your model won't have textures, this is normal and we'll fix it in a second. Press 2 on your keyboard and flip through the animations to check that the process went over smoothly. 
+Your model won't have textures, this is normal and we'll fix it in a second. Press 2 on your keyboard and flip through the animations to check that the process went over smoothly. You want to make sure you have a total of 5 animations as shown here.
 
 ![]({{ site.baseurl }}/assets/images/models/smt-v-models/correct animation view.png)
 
@@ -137,7 +139,7 @@ Now, you'll need to convert those PNG files to TM2.
 {: .warning }
 > For Playstation Vita users, you’ll most likely need to reduce the textures to 512x512 at the maximum to prevent GPU crashes.&#x20;
 
-Open up a command prompt window and pass an argument like this:
+Open up a command prompt window next to GIMConv and pass an argument like this:
 ```
 gimconv (path to png) -o (path to tm2)
 ```
@@ -237,13 +239,11 @@ Here are a few visual examples of what I mean:
 ![]({{ site.baseurl }}/assets/images/models/smt-v-models/model errors example.gif)                                                                       
 *Example of irregular model performance. This is typically caused by missing blend subsets.*
 
-Before we wrap up, you may have noticed that the model size isn't the best. You have two methods of fixing this, one easy and one long.
+Before we wrap up, you may have noticed that the model size isn't the best. You have a pretty easy way of fixing this.
 
-The easy method involves adjusting ps\_model.bin using [this tool](https://github.com/ShrineFox/P4GPS\_ModelEditor) and [this guide](https://www.youtube.com/watch?v=H\_YEB8efylQ). This method is the fastest and easiest, but if you're unable to use this method, you can try this next one.
+For this method, you'll need to dump the ps\_model.bin from cmbroot.arc. This file handles the scaling and positioning of models in the compendium and fusion screen. You can use [this tool](https://github.com/ShrineFox/P4GPS\_ModelEditor) and [this guide](https://www.youtube.com/watch?v=H\_YEB8efylQ) to make your changes.. If you're unable to use cheat engine, you're also able to make these adjustments blindly and repeatedly check in game. 
 
-The long method involves going back to the very first step of the guide, and changing the scale value to a larger or smaller number. A scale of 140 is the sweet spot for most models, but you may need to scale this number up and down. Continue with the rest of the guide and repeat if necessary until you reach a desired size.
-
-Once you've checked all of these, verified that the size is adequte, and can verify that all aspects are working perfectly, **congrats!** You've successfully ported a model from DX2!
+Once you've checked all of the examples listed above, verified that the size is adequate, and can verify that all other aspects are working perfectly, **congrats!** You've successfully ported a model from DX2!
 
 In the next section, we'll go through other potential problems you may have faced and how to fix them.
 

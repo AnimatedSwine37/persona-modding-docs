@@ -69,7 +69,8 @@ Make sure “Load Skeleton Only” isn’t checked and press “Import PSK.” N
 
 ![]({{ site.baseurl }}/assets/images/models/smt-v-models/actor x.png)
 
-![]({{ site.baseurl }}/assets/images/models/smt-v-models/lod info.png)*LOD stands for Level of Detail. Basically the less detailed version of the model used for far away models, you don't want to work with those.
+![]({{ site.baseurl }}/assets/images/models/smt-v-models/lod info.png)                    
+*LOD stands for Level of Detail. Basically the less detailed version of the model used for far away demons, you don't want to work with those.*
 
 Once loaded in, you’ll need to rotate the model 180 degrees on the Z axis so that it faces the right direction when ported to P4G.
 
@@ -135,7 +136,8 @@ Repeat this until every mesh has a skin modifier. You need to make sure every pa
 
 Your model should have returned to the correct rotation. If any parts are facing the opposite direction, click on them and paste the skin modifier back onto them. Your viewport should look something like this:
 
-![]({{ site.baseurl }}/assets/images/models/smt-v-models/viewport view again.png)*Take note of the lack of polygons or vertexes left over in the original mesh, you want to ensure that yours is the same*
+![]({{ site.baseurl }}/assets/images/models/smt-v-models/viewport view again.png)                                                                 
+*Take note of the lack of polygons or vertexes left over in the original mesh, you want to ensure that yours is the same.*
 
 Done? Next, we need to apply the textures to the model with the material editor.
 
@@ -237,8 +239,12 @@ Once it's open you’ll need to do two things here:
     ![]({{ site.baseurl }}/assets/images/models/smt-v-models/changed texture extension.png)
 * **Second**, fix the materials by copying the material data from a working P4G model. If you don’t do this, your model won’t be visible in-game. Make sure you pick the right materials too, as it may cause the model to be too dark or too bright.
 
-    ![]({{ site.baseurl }}/assets/images/models/smt-v-models/old incorrect materials.png)*Incorrect base materials.*
-    ![]({{ site.baseurl }}/assets/images/models/smt-v-models/new correct materials.png)*Correct adjusted materials.*
+    ![]({{ site.baseurl }}/assets/images/models/smt-v-models/old incorrect materials.png)                                                                           
+    *Incorrect base materials.*
+
+    ![]({{ site.baseurl }}/assets/images/models/smt-v-models/new correct materials.png)                                                                               
+    *Correct adjusted materials.*
+
 
 After both changes are made, reconvert the model back to gmo with Sadoaiya/GMOConv and test again in GMOView. Type either command like this:
 {% tabs smt-v %}
