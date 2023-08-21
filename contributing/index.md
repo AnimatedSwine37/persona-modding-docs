@@ -44,10 +44,12 @@ Now you've cloned your fork to your computer! You can see the files by clicking 
 ## Running Locally
 Before you start making changes it's a good idea to run the site locally, then you can see exactly how your changes will look as you make them.
 
-This site is generated using [Jekyll](https://jekyllrb.com/) which uses [Ruby](https://www.ruby-lang.org/en/) so first you'll need to install Ruby. For a comprehensive guide check out [Ruby's installation documentation](https://www.ruby-lang.org/en/documentation/installation/).
+This site is generated using [Jekyll](https://jekyllrb.com/) which uses [Ruby](https://www.ruby-lang.org/en/) so first you'll need to install Ruby **3.1.x**. For a comprehensive guide check out [Ruby's installation documentation](https://www.ruby-lang.org/en/documentation/installation/).
 
 {: .info }
-> For Windows users the easiest way to do so is using [Ruby Installer](https://rubyinstaller.org/)
+> For Windows users the easiest way to do so is using [Ruby Installer](https://rubyinstaller.org/downloads/)
+> 
+> Download the latest **Ruby+Devkit 3.1** file and run it (as of writing **Ruby+Devkit 3.1.4-1**)
 
 Once you've installed Ruby open up a terminal in the folder you cloned your fork to. Then to install Jekyll and this site's dependencies run the following two commands:
 
@@ -66,6 +68,9 @@ bundle exec jekyll serve
 ```
 
 If all went well you can now go to [http://127.0.0.1:4000/persona-modding-docs/](http://127.0.0.1:4000/persona-modding-docs/) in your browser to see the site running locally. 
+
+{: .info }
+> If you get an error that the `ffi` gem could not be found locally, double check that you're using Ruby **3.1.x** by running `ruby -v`. If you're on a newer version please downgrade to 3.1.
 
 Whenever you change a file from now on, the site will automatically update to reflect the changes although you will have to reload the page.
 
