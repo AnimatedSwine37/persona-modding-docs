@@ -122,7 +122,7 @@ After an animation is selected, verify that it's working by pressing the Play bu
 ![]({%link /assets/images/models/p5r-models/play animation button location.png %}){: .center-image }
 
 {: .info }
-> Animation playing strangely? Bones and limbs stretching out in weird ways?.
+> Animation playing strangely? Bones and limbs stretching out in weird ways?
 >
 > This typically means your model wasn't properly converted over to P5R. Assuming you're working with a model mod, try working with the base file from the original game instead. In most cases, that means grabbing the model from SMT DX2, [here's a link to jump that guide.]({%link models/p4g-model-porting/dx2-models.md %})
 
@@ -160,14 +160,14 @@ In the Start Time, set the value to a negative number above 100, like this:
 
 ![]({%link /assets/images/models/p5r-models/frame start value shown.png %}){: .center-image }*You may need to set this number higher later on depending on the number of frames.*
 
-Now, highlight all the bones on the left. Triple check that all bones are seleted or you may have issues with the animation later. Next, select all the key frames shown at the bottom and move them to the very beginning of the animation timing, like this:
+Now, highlight all the bones on the left. Triple check that all bones are selected or you may have issues with the animation later. Next, select all the key frames shown at the bottom and move them to the very beginning of the animation timing, like this:
 
 ![]({%link /assets/images/models/p5r-models/shown negative frame keys.png %}){: .center-image }
 
 Once it's moved, go back to the Import Script again and now load Animation 8. Your frame timings will disappear, but they're still there. Go back to the Time Configuration screen and extend the Start Time to the same value as before.
 
 {: .info }
-> Animation 7 is skipped because it's mostly the Magic animation beind held. Not needed for Persona 4 Golden at all, but if you'd like to add it, you can.
+> Animation 7 is skipped because it's mostly the Magic animation being held. Not needed for Persona 4 Golden at all, but if you'd like to add it, you can.
 >
 
 Move these new frames to the end of your previous animation.
@@ -205,11 +205,9 @@ Gmoconv.exe model.fbx -S -motions attack.fbx skill.fbx attack.fbx skill.fbx idle
 
 This command does several things, so let's break it down into something understandable.
 
-First, it converts all of the fbx files into GMO files for use in P4G.
-
-Next, it merges all of the animation data into the first model.
-
-Finally, it extracts that model as a GMS for easy editing.
+* **First**, it converts all of the fbx files into GMO files for use in P4G.
+* **Next**, it merges all of the animation data into the first model.
+* **Finally**, it extracts that model as a GMS for easy editing.
 
 Let's verify that the process went over smoothly by opening up our GMO in GMOView. 
 
@@ -272,7 +270,34 @@ With your newly made GMO, check it again in GMOView. Assuming the process went r
 
 ![]({%link /assets/images/models/p5r-models/missing texture warning.png %}){: .center-image }
 
-Once you've verified that the model has all the necessary textures, you'll need to convert the GMO into an AMD for testing in game. Pass a command like either of these to do so.
+Before we get to testing in game, we have one last thing to check, and it's incredibly important.
+
+## Material Fixing
+
+Fixing the materials is a very important step towards getting your model to work in Persona 4 Golden. Without it, your model could either be invisible, too bright, or just too dark.
+
+First, locate a Persona model from the base game, in my case, I'll use Surt.
+
+Extract the Surt AMD as a GMS by passing a command like this in GMOConv:
+```
+GMOConv -S (path to gmo)
+```
+
+This will extract the AMD as a GMS file. Next, move to the material section and copy all the data above Layer, as shown here:
+
+![]({%link /assets/images/models/p5r-models/surt material data.png %})
+
+Paste this copied data into your Persona's material data section as well:
+
+![]({%link /assets/images/models/p5r-models/old material data.png %})
+
+![]({%link /assets/images/models/p5r-models/new material data.png %})
+
+Finally, reconvert your model back to a GMO like we did before. You should notice a brightness increase as well. Now we can move onto converting to AMD.
+
+## AMD Conversion
+
+Once you've verified that the model has all the necessary textures, and has it's materials fixed, you'll need to convert the GMO into an AMD for testing in game. Pass a command like either of these to do so.
 
 {% tabs smt-v-2 %}
 {% tab smt-v-2 python %}
@@ -294,7 +319,7 @@ Once you've guaranteed your model is in working order, we can continue onto test
 
 The easiest way to test your model in-game is to replace an existing model and check that instead, here's a[ list of what models go with which Persona](https://amicitia.miraheze.org/wiki/Persona\_4\_Golden/data.cpk/model/persona).
 
-Testing in game is a very imporant process, if you're interested in publishing this model as a mod, you want to make sure nobody will have problems with it. I've taken the time to generate a list of things to check for while you're in game:
+Testing in game is a very important process, if you're interested in publishing this model as a mod, you want to make sure nobody will have problems with it. I've taken the time to generate a list of things to check for while you're in game:
 
 * Model visibility (Does the model actually render?)
 * Positioning and scale in the compendium (Is the model centered in the compendium screen?)
@@ -320,7 +345,7 @@ In the next section, we'll go through potential problems you may have faced and 
 
 Here are some possible solutions to problems you may be having.
 
-* The model is invisible / not rendering.
+* The model is invisible / not rendering properly.
   * Double-check that you fixed the materials for use in P4G, if you didn't, the model will be invisible in game. The easiest way to do that is to copy the material data from another Persona's GMS file.
 * The model is facing the wrong direction in one or more animations.
   * You most likely forgot to rotate the model by 180 degrees again after importing another animation. Go back to 3DS Max and reimport the animation, then rotate it by 180 degrees on the Z axis, and 90 degrees on the X axis, then export again.

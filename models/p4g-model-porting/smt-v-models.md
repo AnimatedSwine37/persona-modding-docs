@@ -257,7 +257,7 @@ sadoaiya (path to gms)
 
 Your model should now have textures when viewed in GMOView. Now is a good time to check if you made any mistakes with your textures.
 
-Once you've confirmed that the model is working as intended, convert the GMO to AMD via thse two methods:
+Once you've confirmed that the model is working as intended, convert the GMO to AMD via these two methods:
 {% tabs smt-v-2 %}
 {% tab smt-v-2 python %}
 ```
