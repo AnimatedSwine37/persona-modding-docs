@@ -7,6 +7,9 @@ parent: P4G Model Porting
 ---
 
 # 👿 SMT V Models
+This guide was written by [Dexxtrip](https://gamebanana.com/members/2225195) on Gamebanana / @bonq.com on Discord.
+
+This guide covers the process of porting Demon designs from Shin Megami Tensei V to Persona 4 Golden. These instructions apply to both the PC and Vita versions unless specified otherwise.
 
 <details open markdown="block">
   <summary>
@@ -41,13 +44,13 @@ These are the tools needed for porting SMT V models.
 >  
 > Check if the model you're looking to port exists in another medium that is easier to port before you do anything here.
 > 
-> For instance, check if the same design is featured in DX2, and then attempt to port the DX2 model instead.
+> For instance, check if the same design is featured in DX2, and then attempt to port the DX2 model instead. Found the model in DX2? Click [here]({%link models/p4g-model-porting/dx2-models.md %}) to jump to the DX2 model porting guide.
 > 
-> If it doesn't exist in DX2, move on to P5R and check if it either exists in the base game or has been added in a mod. Working with P5R models is much easier than with SMT V models.
+> If it doesn't exist in DX2, move on to P5R and check if the design / demon exists in the base game or has been added in a mod. Working with P5R models is much easier than with SMT V models. Located a working P5R model? Click [here]({%link models/p4g-model-porting/p5r-models.md %}) to jump to the P5R porting guide.
 > 
-> If it doesn't exist there either, triple-check that no one has ported it to P4G already. There are a few mods that port over SMT V models, and the model you're interested in may already be done for you.
+> If it doesn't in P5R either, finally, triple-check that no one has ported the model to P4G already. There are a few mods that port over SMT V models, and the model you're interested in may already be done for you.
 > 
-> If you've guaranteed that the work isn't already done, continue with the guide.
+> If you've absolutely guaranteed that the work isn't already done, continue with the rest of the guide.
 
 ## Dumping your model
 
@@ -66,7 +69,7 @@ Make sure “Load Skeleton Only” isn’t checked and press “Import PSK.” N
 
 ![]({{ site.baseurl }}/assets/images/models/smt-v-models/actor x.png)
 
-![]({{ site.baseurl }}/assets/images/models/smt-v-models/lod info.png)
+![]({{ site.baseurl }}/assets/images/models/smt-v-models/lod info.png)*LOD stands for Level of Detail. Basically the less detailed version of the model used for far away models, you don't want to work with those.
 
 Once loaded in, you’ll need to rotate the model 180 degrees on the Z axis so that it faces the right direction when ported to P4G.
 
@@ -122,7 +125,7 @@ Repeat these steps until the mesh is completely invisible.&#x20;
 
 To ensure that all parts are detached at the end, drag and click over the entire size of the window to select any possible leftover meshes, and detach those too.&#x20;
 
-![]({{ site.baseurl }}/assets/images/models/smt-v-models/leftover bit.png)
+![]({{ site.baseurl }}/assets/images/models/smt-v-models/leftover bit.png)*Leftover bits will be highlighted in red, as shown here.*
 
 Once done, unhide everything so that the entire model is visible.&#x20;
 
@@ -132,7 +135,7 @@ Repeat this until every mesh has a skin modifier. You need to make sure every pa
 
 Your model should have returned to the correct rotation. If any parts are facing the opposite direction, click on them and paste the skin modifier back onto them. Your viewport should look something like this:
 
-![]({{ site.baseurl }}/assets/images/models/smt-v-models/viewport view again.png)
+![]({{ site.baseurl }}/assets/images/models/smt-v-models/viewport view again.png)*Take note of the lack of polygons or vertexes left over in the original mesh, you want to ensure that yours is the same*
 
 Done? Next, we need to apply the textures to the model with the material editor.
 
@@ -234,8 +237,8 @@ Once it's open you’ll need to do two things here:
     ![]({{ site.baseurl }}/assets/images/models/smt-v-models/changed texture extension.png)
 * **Second**, fix the materials by copying the material data from a working P4G model. If you don’t do this, your model won’t be visible in-game. Make sure you pick the right materials too, as it may cause the model to be too dark or too bright.
 
-    ![]({{ site.baseurl }}/assets/images/models/smt-v-models/old incorrect materials.png)
-    ![]({{ site.baseurl }}/assets/images/models/smt-v-models/new correct materials.png)
+    ![]({{ site.baseurl }}/assets/images/models/smt-v-models/old incorrect materials.png)*Incorrect base materials.*
+    ![]({{ site.baseurl }}/assets/images/models/smt-v-models/new correct materials.png)*Correct adjusted materials.*
 
 After both changes are made, reconvert the model back to gmo with Sadoaiya/GMOConv and test again in GMOView. Type either command like this:
 {% tabs smt-v %}
@@ -290,8 +293,7 @@ Testing in game is the final part of getting models to work properly. You're goi
 
 Here are a few visual examples of what I mean:
 
-![]({{ site.baseurl }}/assets/images/models/smt-v-models/scaling comp example.png)
-*Example of good and bad compendium scaling and positioning. You want to aim for the image on the right where the Persona takes up as much of the empty space.*
+![]({{ site.baseurl }}/assets/images/models/smt-v-models/scaling comp example.png)*Example of good and bad compendium scaling and positioning. You want to aim for the image on the right where the Persona takes up as much of the empty space.*
 
 ![]({{ site.baseurl }}/assets/images/models/smt-v-models/pos battle example.jpg)
 *Example of bad battle positioning, take note of the model clipping into the floor, you don't want that.*
@@ -314,7 +316,7 @@ Here are some possible solutions to problems you may be having.
 * The model is incorrectly positioned, or scaled in either the compendium or fusion screen.
   * This is due to the stock ps\_model.bin formatting for the model you replaced. To adjust these, you'll need to use [this tool](https://github.com/ShrineFox/P4GPS\_ModelEditor). Dump the file by opening cmbroot.arc in Amicitia and extracting ps\_model.bin. Once that is done, open it in the tool, find the model value by checking [this page](https://amicitia.miraheze.org/wiki/Persona\_4\_Golden/Personas), and make your adjustments there. You can also use[ cheat engine](https://www.cheatengine.org/) and [this tutorial](https://www.youtube.com/watch?v=H\_YEB8efylQ) to make your changes on the fly for later applying to the ps\_model.bin file itself.
 * The model is incorrectly positioned during battles.
-  * This is a similar problem to the last one, the stock positioning for the model is different than your model. To fix this, you'll need to use 010 Editor, [this template](https://cdn.discordapp.com/attachments/1046042733946617886/1139287641494388816/P4G\_tbl\_2.bt), [these structs](https://cdn.discordapp.com/attachments/1046042733946617886/1139287641121112114/p4g\_enums.bt), and the MODEL.TBL file from init\_free.bin to fix the offset.&#x20;
+  * This is a similar problem to the last one, the stock positioning for the model is different than your model. To fix this, you'll need to use [010 Editor](https://www.sweetscape.com/010editor/), [this template](https://cdn.discordapp.com/attachments/1046042733946617886/1139287641494388816/P4G\_tbl\_2.bt), [these structs](https://cdn.discordapp.com/attachments/1046042733946617886/1139287641121112114/p4g\_enums.bt), and the MODEL.TBL file from init\_free.bin to fix the offset.&#x20;
 * Some of the model's parts are blinking in and out of existence or rotating wildly.
   * This is due to missing blend subsets. If you didn't before, try optimizing your model with Sadoaiya to re-add blend subsets if they're missing. Once you're done, retest in-game.
 * Part of the model isn't animating.

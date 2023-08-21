@@ -7,6 +7,9 @@ parent: P4G Model Porting
 ---
 
 # 🎭 P5R Models
+This guide was written by [Dexxtrip](https://gamebanana.com/members/2225195) on Gamebanana / @bonq.com on Discord.
+
+This guide covers the process of porting Persona designs from Persona 5 Royal to Persona 4 Golden. These instructions apply to both the PC and Vita versions unless specified otherwise.
 
 <details open markdown="block">
   <summary>
@@ -118,6 +121,11 @@ After an animation is selected, verify that it's working by pressing the Play bu
 
 ![]({%link /assets/images/models/p5r-models/play animation button location.png %}){: .center-image }
 
+{: .info }
+> Animation playing strangely? Bones and limbs stretching out in weird ways?.
+>
+> This typically means your model wasn't properly converted over to P5R. Assuming you're working with a model mod, try working with the base file from the original game instead. In most cases, that means grabbing the model from SMT DX2, [here's a link to jump that guide.]({%link models/p4g-model-porting/dx2-models.md %})
+
 Once you've verified that the animation is playing correctly, rotate the model again.
 
 The same information applies here like before, select the root bone on the left, right click the rotate option, then rotate the model so it's facing up and towards the back of the scene.
@@ -150,9 +158,7 @@ After that, go to the time configuration option shown here:
 
 In the Start Time, set the value to a negative number above 100, like this:
 
-![]({%link /assets/images/models/p5r-models/frame start value shown.png %}){: .center-image }
-
-You may need to set this number higher later on depending on the number of frames.
+![]({%link /assets/images/models/p5r-models/frame start value shown.png %}){: .center-image }*You may need to set this number higher later on depending on the number of frames.*
 
 Now, highlight all the bones on the left. Triple check that all bones are seleted or you may have issues with the animation later. Next, select all the key frames shown at the bottom and move them to the very beginning of the animation timing, like this:
 
@@ -229,11 +235,11 @@ Texture "
 
 It should point to a texture location similar to this:
 
-![]({%link /assets/images/models/p5r-models/old texture name location.png %}){: .center-image }
+![]({%link /assets/images/models/p5r-models/old texture name location.png %}){: .center-image }*The default path contained in the GMS file will always point to where your GMD and GAP files are located, since the DDS files will have been extracted during the 3DS Max process.*
 
 Take note of which textures are mentioned here, as those are the only ones that are actually required for conversion / importing.
 
-Once located, change the extension to .TM2 and carry on. Your file should look something like this:
+Once located, change the extension to .TM2 and carry on. Your file should look something like this once you're done:
 
 ![]({%link /assets/images/models/p5r-models/new texture name location.png %}){: .center-image }
 
@@ -262,7 +268,7 @@ sadoaiya (path to gms)
 {% endtab %}
 {% endtabs %}
 
-With your newly made GMO, check it again in GMOView. Assuming the process went right, your model should now be fully textured. If you missed any during the editing process, GMOView will let you know with a warning on the left, like this"
+With your newly made GMO, check it again in GMOView. Assuming the process went right, your model should now be fully and properly textured. If you missed any during the editing process, GMOView will let you know with a warning on the left, like this:
 
 ![]({%link /assets/images/models/p5r-models/missing texture warning.png %}){: .center-image }
 
@@ -288,7 +294,7 @@ Once you've guaranteed your model is in working order, we can continue onto test
 
 The easiest way to test your model in-game is to replace an existing model and check that instead, here's a[ list of what models go with which Persona](https://amicitia.miraheze.org/wiki/Persona\_4\_Golden/data.cpk/model/persona).
 
-Testing in game is the final part of getting models to work properly. You're going to need to check for a lot of things while in the game, so here's a list:
+Testing in game is a very imporant process, if you're interested in publishing this model as a mod, you want to make sure nobody will have problems with it. I've taken the time to generate a list of things to check for while you're in game:
 
 * Model visibility (Does the model actually render?)
 * Positioning and scale in the compendium (Is the model centered in the compendium screen?)
@@ -304,8 +310,7 @@ Here are a few visual examples of what I mean:
 ![]({%link /assets/images/models/smt-v-models/pos battle example.jpg %}){: .center-image }
 *Example of bad battle positioning, take note of the model clipping into the floor, you don't want that.*
 
-![]({%link /assets/images/models/smt-v-models/model errors example.gif %}){: .center-image }                                                                 
-*Example of irregular model performance. This is typically caused by missing blend subsets.*
+![]({%link /assets/images/models/smt-v-models/model errors example.gif %}){: .center-image }*Example of irregular model performance. This is typically caused by missing blend subsets.*
 
 Once you've checked all of these, and can verify that they are working perfectly, **congrats!** You've successfully ported a model from P5R!.
 
@@ -322,7 +327,7 @@ Here are some possible solutions to problems you may be having.
 * The model is incorrectly positioned, or scaled in either the compendium or fusion screen.
   * This is due to the stock ps\_model.bin formatting for the model you replaced. To adjust these, you'll need to use [this tool](https://github.com/ShrineFox/P4GPS\_ModelEditor). Dump the file by opening cmbroot.arc in Amicitia and extracting ps\_model.bin. Once that is done, open it in [the tool]((https://github.com/ShrineFox/P4GPS\_ModelEditor)), find the model's value by checking [this page](https://amicitia.miraheze.org/wiki/Persona\_4\_Golden/Personas), and make your adjustments there. You can also use[ cheat engine](https://www.cheatengine.org/) and [this tutorial](https://www.youtube.com/watch?v=H\_YEB8efylQ) to make your changes on the fly for later applying to the ps\_model.bin file itself.
 * The model is incorrectly positioned during battles.
-  * This is a similar problem to the last one, the stock positioning for the model is different than your model. To fix this, you'll need to use 010 Editor, [this template](https://cdn.discordapp.com/attachments/1046042733946617886/1139287641494388816/P4G\_tbl\_2.bt), [these structs](https://cdn.discordapp.com/attachments/1046042733946617886/1139287641121112114/p4g\_enums.bt), and the MODEL.TBL file from init\_free.bin to fix the offset.&#x20;
+  * This is a similar problem to the last one, the stock positioning for the model is different than your model. To fix this, you'll need to use [010 Editor](https://www.sweetscape.com/010editor/), [this template](https://cdn.discordapp.com/attachments/1046042733946617886/1139287641494388816/P4G\_tbl\_2.bt), [these structs](https://cdn.discordapp.com/attachments/1046042733946617886/1139287641121112114/p4g\_enums.bt), and the MODEL.TBL file from init\_free.bin to fix the offset.&#x20;
 * Some of the model's parts are blinking in and out of existence or rotating wildly.
   * This is due to missing blend subsets. If you didn't before, try optimizing your model with Sadoaiya to re-add blend subsets if they're missing. Once you're done, retest in-game.
 * The model's animations aren't correct.
