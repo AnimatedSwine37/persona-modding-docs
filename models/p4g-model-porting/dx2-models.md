@@ -54,7 +54,7 @@ In this window we'll need to set a few options. First, set the Additional Animat
 This does several things, so let's break it down.
 
 * **First**, it exports the model in an older format so that it can be converted by GMOConv later.
-* **Second**, Second, it scales the models up to a more reasonable size.
+* **Second**, it scales the models up to a more reasonable size.
 * **Next**, it exports all animations as their own individual FBX files.
 * **After that**, it rotates the model 180 degrees on the Z axis so the model faces the correct direction in P4G.
 * **Finally**, it adjusts the bones to match the model.
@@ -176,6 +176,9 @@ You can do this by extracting a model from the base game using GMOConv, like thi
 ```
 GMOConv -S (path to gmo)
 ```
+
+I'll be using Surt as an example here.
+
 Open up the new GMS file and move to the material section like this:
 ![]({%link /assets/images/models/dx2-models/surt material data.png %})
 
@@ -238,7 +241,7 @@ Before we wrap up, you may have noticed that the model size isn't the best. You 
 
 The easy method involves adjusting ps\_model.bin using [this tool](https://github.com/ShrineFox/P4GPS\_ModelEditor) and [this guide](https://www.youtube.com/watch?v=H\_YEB8efylQ). This method is the fastest and easiest, but if you're unable to use this method, you can try this next one.
 
-The long method involves going back to the very first step of the guide, and changing the scale value to a larger or smaller number. 140 is the sweet spot for most models, but you may need to scale this number up and down. Continue with the rest of the guide and repeat if necessary until you reach a desired size.
+The long method involves going back to the very first step of the guide, and changing the scale value to a larger or smaller number. A scale of 140 is the sweet spot for most models, but you may need to scale this number up and down. Continue with the rest of the guide and repeat if necessary until you reach a desired size.
 
 Once you've checked all of these, verified that the size is adequte, and can verify that all aspects are working perfectly, **congrats!** You've successfully ported a model from DX2!
 
