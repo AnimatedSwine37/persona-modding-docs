@@ -78,6 +78,7 @@ title: Extracting The Game's Files
 layout: page
 parent: Getting Started
 nav_order: 1
+games: ['P3P', 'P4G', 'P5R']
 ---
 ```
 
@@ -93,9 +94,9 @@ This specifies a type of layout the page should use, for the purposes of this do
 {% endtab %}
 
 {% tab front-matter parent %}
-If a page has a parent you put the name of it here 
+If a page is a sub-page you need to set this. Note that if it's a sub-sub-page you will also need to set `grand_parent`. 
 
-For example [Getting Started]({%link getting-started/index.md %}) is the parent of [Extracting The Game's Files]({%link getting-started/extracting-files.md %}).
+For example, [SMT V Models]({%link models/p4g-model-porting/smt-v-models.md %}) has a parent [P4G Model Porting]({%link models/p4g-model-porting/index.md %}) and grandparent [Models]({%link models/index.md %}).
 {% endtab %}
 
 {% tab front-matter has_children %}
@@ -107,6 +108,11 @@ The order that pages will appear in the navigation bar, lower numbers appear fir
 
 Children have unique orderings, i.e. the main pages (Home, Getting Started, Music, etc) go from 1, up, the sub-pages of Getting Started also go from 1 up, etc.
 {% endtab %}
+
+{% tab front-matter games %}
+A list of games the page applies to. This is used for the filtering from the nav bar.
+{% endtab %}
+
 {% endtabs %}
 
 Once you've got the front-matter correct you can actually write the content of the page. All of the usual markdown syntax applies like `*` for italics, `#` for headings, etc, however there are also a few extra things you can do.

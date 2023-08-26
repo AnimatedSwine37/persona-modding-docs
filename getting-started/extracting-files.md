@@ -3,6 +3,7 @@ title: Extracting The Game's Files
 layout: page
 parent: Getting Started
 nav_order: 1
+games: ['P3P', 'P4G', 'P5R']
 ---
 
 Before you start making your mod you'll need to extract the game's base files so you can find what you actually want to edit. 

@@ -3,6 +3,7 @@ title: Making A Mod
 layout: page
 nav_order: 2
 parent: Getting Started
+games: ['P3P', 'P4G', 'P5R']
 ---
 
 The first thing you need to do is make your mod in Reloaded. To do so open up Reloaded, go to the **Manage Mods** tab, and click **New**.
