@@ -2,23 +2,8 @@
 title: Contributing
 layout: page
 nav_order: 11
+include_toc: true
 ---
-
-
-# Contributing
-{: .d-inline-block }
-
-Universal
-{: .label .label-green } 
-
-<details open markdown="block">
-  <summary>
-    Table of contents
-  </summary>
-  {: .text-delta }
-1. TOC
-{:toc}
-</details>
 
 These docs are open-source and community driven. Any contributions are appreicated!
 
@@ -215,20 +200,16 @@ Here's some information about bash
 The basic structure is that we have a `tabs` block with a name, in this case `commands`. Then we have any number of `tab` blocks with the name of the tabs block they're a part of (so `commands` here), and the name of the tab which is shown to the user (like `powershell`). 
 
 ### Table Of Contents
-A table of contents is useful for pages with many headings, to add one you can use the following:
-
+A table of contents is useful for pages with many headings, to add one to a page add `include_toc: true` to your front matter. For example:
 ```
-<details open markdown="block">
-  <summary>
-    Table of contents
-  </summary>
-  {: .text-delta }
-1. TOC
-{:toc}
-</details>
-```
-
-Please keep table of contents to the top of your file, right under the main heading for consistency. 
+---
+title: Contributing
+layout: page
+nav_order: 11
+include_toc: true
+games: ['Universal']
+---
+``` 
 
 ## Writing Guidelines
 The aim of this documentation is to be a **practical** guide to modding games, and to be **consistent** throughout. As such, please remember the following when writing your guides:

@@ -4,18 +4,8 @@ layout: page
 nav_order: 1
 grand_parent: Models
 parent: P4G Model Porting
+include_toc: true
 ---
-
-# 👿 SMT V Models
-
-<details open markdown="block">
-  <summary>
-    Table of contents
-  </summary>
-  {: .text-delta }
-1. TOC
-{:toc}
-</details>
 
 ## Required Tools
 

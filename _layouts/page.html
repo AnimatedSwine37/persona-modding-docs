@@ -1,7 +1,13 @@
 ---
 layout: default
 ---
-<script src={%link assets/js/tabs.js %}></script>
-<link rel="stylesheet" href={%link /assets/css/tabs.css %}>
+{% if page.include_toc %}
+<details open markdown="block">
+    <summary class="text-delta">
+        Table of contents
+    </summary>
+    {% include toc.html html=content ordered=true %}
+</details>
+{% endif %}
 
 {{ content }}
