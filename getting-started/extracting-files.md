@@ -5,12 +5,6 @@ parent: Getting Started
 nav_order: 1
 ---
 
-# Extracting The Game's Files
-{: .d-inline-block }
-
-Universal
-{: .label .label-green } 
-
 Before you start making your mod you'll need to extract the game's base files so you can find what you actually want to edit. 
 
 ## Extracting CPKs

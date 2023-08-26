@@ -5,12 +5,6 @@ parent: Getting Started
 nav_order: 3
 ---
 
-# Replacing Files
-{: .d-inline-block }
-
-Universal
-{: .label .label-green } 
-
 Now that you have [made a mod](making-a-mod) you can start replacing the game's files. There are two broad types of files which you will replace in different ways: **loose** files and **packed** files.
 
 ## Replacing Loose Files

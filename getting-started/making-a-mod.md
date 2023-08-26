@@ -5,11 +5,6 @@ nav_order: 2
 parent: Getting Started
 ---
 
-# Making a Mod
-{: .d-inline-block }
-Universal
-{: .label .label-green } 
-
 The first thing you need to do is make your mod in Reloaded. To do so open up Reloaded, go to the **Manage Mods** tab, and click **New**.
 
 ![]({%link assets/images/getting-started/new-mod.png %})

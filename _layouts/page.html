@@ -1,6 +1,12 @@
 ---
 layout: default
 ---
+
+{% if page.games %}
+    <div class="d-inline-block">
+{% endif %}
+{{ "# " | append: page.title | markdownify }}
+
 {% if page.include_toc %}
 <details open markdown="block">
     <summary class="text-delta">

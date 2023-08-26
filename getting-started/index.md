@@ -5,12 +5,6 @@ nav_order: 2
 has_children: true
 ---
 
-# Getting Started 
-{: .d-inline-block }
-
-Universal
-{: .label .label-green } 
-
 This guide assumes that you have already installed [Reloaded-II](https://github.com/Reloaded-Project/Reloaded-II) and setup mods for the game you want to mod. If you haven't yet, please do so and then come back here (guides for [P3P](https://gamebanana.com/tuts/15677), [P4G](https://gamebanana.com/tuts/15696), [P5R](https://gamebanana.com/tuts/15399)).
 
 {: .todo }
