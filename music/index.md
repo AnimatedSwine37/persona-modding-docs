@@ -3,22 +3,8 @@ title: Music
 layout: page
 nav_order: 3
 has_children: true
+include_toc: true
 ---
-
-# Music
-{: .d-inline-block }
-
-Universal
-{: .label .label-green } 
-
-<details open markdown="block">
-  <summary>
-    Table of contents
-  </summary>
-  {: .text-delta }
-1. TOC
-{:toc}
-</details>
 
 In P3P, audio is stored as loose files in umd1.cpk, organized into subfolders based on purpose. In P4G and P5R, they are instead packed within ACB and AWB archives (they come in pairs). Replacing files in an ACB/AWB archive is not unlike replacing files in a PAK archive, except that you'll be making a folder called FEmulator/AWB instead of FEmulator/PAK.
 

@@ -4,6 +4,8 @@ layout: page
 nav_order: 1
 grand_parent: Models
 parent: P4G Model Porting
+include_toc: true
+games: ['P4G']
 ---
 
 # 👿 SMT V Models

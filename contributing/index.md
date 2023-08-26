@@ -2,23 +2,8 @@
 title: Contributing
 layout: page
 nav_order: 11
+include_toc: true
 ---
-
-
-# Contributing
-{: .d-inline-block }
-
-Universal
-{: .label .label-green } 
-
-<details open markdown="block">
-  <summary>
-    Table of contents
-  </summary>
-  {: .text-delta }
-1. TOC
-{:toc}
-</details>
 
 These docs are open-source and community driven. Any contributions are appreicated!
 
@@ -93,6 +78,7 @@ title: Extracting The Game's Files
 layout: page
 parent: Getting Started
 nav_order: 1
+games: ['P3P', 'P4G', 'P5R']
 ---
 ```
 
@@ -108,9 +94,9 @@ This specifies a type of layout the page should use, for the purposes of this do
 {% endtab %}
 
 {% tab front-matter parent %}
-If a page has a parent you put the name of it here 
+If a page is a sub-page you need to set this. Note that if it's a sub-sub-page you will also need to set `grand_parent`. 
 
-For example [Getting Started]({%link getting-started/index.md %}) is the parent of [Extracting The Game's Files]({%link getting-started/extracting-files.md %}).
+For example, [SMT V Models]({%link models/p4g-model-porting/smt-v-models.md %}) has a parent [P4G Model Porting]({%link models/p4g-model-porting/index.md %}) and grandparent [Models]({%link models/index.md %}).
 {% endtab %}
 
 {% tab front-matter has_children %}
@@ -122,6 +108,11 @@ The order that pages will appear in the navigation bar, lower numbers appear fir
 
 Children have unique orderings, i.e. the main pages (Home, Getting Started, Music, etc) go from 1, up, the sub-pages of Getting Started also go from 1 up, etc.
 {% endtab %}
+
+{% tab front-matter games %}
+A list of games the page applies to. This is used for the filtering from the nav bar.
+{% endtab %}
+
 {% endtabs %}
 
 Once you've got the front-matter correct you can actually write the content of the page. All of the usual markdown syntax applies like `*` for italics, `#` for headings, etc, however there are also a few extra things you can do.
@@ -215,20 +206,16 @@ Here's some information about bash
 The basic structure is that we have a `tabs` block with a name, in this case `commands`. Then we have any number of `tab` blocks with the name of the tabs block they're a part of (so `commands` here), and the name of the tab which is shown to the user (like `powershell`). 
 
 ### Table Of Contents
-A table of contents is useful for pages with many headings, to add one you can use the following:
-
+A table of contents is useful for pages with many headings, to add one to a page add `include_toc: true` to your front matter. For example:
 ```
-<details open markdown="block">
-  <summary>
-    Table of contents
-  </summary>
-  {: .text-delta }
-1. TOC
-{:toc}
-</details>
-```
-
-Please keep table of contents to the top of your file, right under the main heading for consistency. 
+---
+title: Contributing
+layout: page
+nav_order: 11
+include_toc: true
+games: ['Universal']
+---
+``` 
 
 ## Writing Guidelines
 The aim of this documentation is to be a **practical** guide to modding games, and to be **consistent** throughout. As such, please remember the following when writing your guides:
