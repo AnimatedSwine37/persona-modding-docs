@@ -31,7 +31,7 @@ Add a section for basic audio editing. Maybe add a section for advanced audio ed
 
 If replacing looped sound such as music or some audio effects, open your replacement audio file in [Audacity](https://www.audacityteam.org/download/) in order to find the song's loop point. To do this, select the start and end of the section of song you want to loop, then set the selection toolbar (at the bottom of the screen) to "Start and End of Selection" with the time displayed as samples.
 
-![]({%link assets/images/music/audacity.png %})
+![]({%link assets/images/audio/audacity.png %})
 
 Mark down the start and end points somewhere, as you will use them when encoding the song. Export the file as a .wav.
 
@@ -39,7 +39,7 @@ Mark down the start and end points somewhere, as you will use them when encoding
 
 [AtomEncd](https://drive.google.com/file/d/1Jx9NBu40XUcJb0U4MdsVjPV84UTzWcpy/view) is used to encode the audio files for the given game.
 
-![]({%link assets/images/music/atomencd.png %})
+![]({%link assets/images/audio/atomencd.png %})
 
 Select your desired audio file by clicking on the `...` button to the left of the Encode button. Enable looping by clicking the Loop switch below the Encode button. Under Loop Options, set the switch to Custom Loop, then enter the Start and End points you found earlier (no commas). Additionally, set Quality to High, Encode Quality to Highest, and the codec as follows:
 

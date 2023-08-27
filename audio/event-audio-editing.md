@@ -37,15 +37,15 @@ Find the event that you want to edit. Many of the events are documented on the [
 
 Open the corresponding folder and find the associated PM2 and PM3 files. Drag these files onto `Libellus Event Editing Tool.exe`. This will convert the files into a JSON file and place it into a new folder.
 
-![]({%link assets/images/music/leet.png %})
+![]({%link assets/images/audio/leet.png %})
 
 When extracted, the PM2 will look something like this:
 
-![]({%link assets/images/music/pm2.png %})
+![]({%link assets/images/audio/pm2.png %})
 
 and the PM3 will look something like this:
 
-![]({%link assets/images/music/pm3_1.png %})
+![]({%link assets/images/audio/pm3_1.png %})
 
 {: .info }
 > Not all events have BGM calls within their PM2 or PM3 files! If your PM3 file does not have a BGM section, the music may either be called as ambience in the PM2 (ex: Junes theme) or stored in `init.bin/event/cmm.bin/cmmEventBGM.dat`. See the next section if you wish to edit `cmmEventBGM.dat`.
@@ -88,11 +88,11 @@ Many of P4G's events call music at the beginning; this data is stored in `init.b
 
 Extract `cmmEventBGM.dat` using Amicitia or Persona Editor, then open it in 010 Editor. By running a template on it, we can use a more readable format. Open a template by clicking the Run Template button, then the Open Template button, or press `Ctrl + F5`.
 
-![]({%link assets/images/music/010_template.png %})
+![]({%link assets/images/audio/010_template.png %})
 
 Open your 010 templates folder and select `/templates/p4g_eventBGM.bt`. This will run the template on the file you have open and present it in a more readable format as shown below.
 
-![]({%link assets/images/music/010_bgm.png %})
+![]({%link assets/images/audio/010_bgm.png %})
 
 Expanding the drop downs shows the following data:
 - MajorID and MinorID: the event ID. For example, in the image above, the event shown is E830_012.
