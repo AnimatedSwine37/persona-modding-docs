@@ -3,7 +3,7 @@ title: Event Audio Editing
 layout: page
 parent: Audio
 nav_order: 3
-games: ['P4G']
+games: ['P3F', 'P4G']
 ---
 
 <details open markdown="block">
@@ -27,13 +27,13 @@ games: ['P4G']
 - [010 Editor](https://www.sweetscape.com/010editor/)
 	- [010 Editor templates](https://github.com/tge-was-taken/010-Editor-Templates)
 
-Persona 4 Golden stores much of its event data in PM1, PM2, and PM3 files in `data.cpk/event`. Notably, music tends to be stored either in the PM3 files or in `init.bin/event/cmm.bin/cmmEventBGM.dat`. Sound effects tend to be stored either in the PM2 or PM3 files.
+Persona 3 FES stores much of its event data in PM1, PM2, and PM3 files in `DATA.CVM/event`, while Persona 4 Golden's PM1, PM2, and PM3 files are in `data.cpk/event`. Notably, music tends to be stored either in the PM3 files or in `init.bin/event/cmm.bin/cmmEventBGM.dat`. Sound effects tend to be stored either in the PM2 or PM3 files.
 
 # Editing BGM And Sound Effect Calls In Events
 
 ## Extracting and opening PM2 and PM3 files
 
-Find the event that you want to edit. Many of the events are documented on the [Amicitia wiki](https://amicitia.miraheze.org/wiki/Persona_4_Golden/Events), but for those that aren't, there are [text script dumps](https://drive.google.com/file/d/113DuAlmIqb8AU4xBYNuU5FDxPP3mVX67/view) with the text from all events so you can find the ID of a specific event. For example, `E136_001` is the scene in Yasogami High School where Yosuke decides to enter the TV for the second time.
+Find the event that you want to edit. For Persona 4 Golden, many of the events are documented on the [Amicitia wiki](https://amicitia.miraheze.org/wiki/Persona_4_Golden/Events). For those that aren't, as well as Persona 3 FES's events, there are [text script dumps](https://drive.google.com/file/d/113DuAlmIqb8AU4xBYNuU5FDxPP3mVX67/view) with the text from all events so you can find the ID of a specific event. For example, `E136_001` in P4G is the scene in Yasogami High School where Yosuke decides to enter the TV for the second time.
 
 Open the corresponding folder and find the associated PM2 and PM3 files. Drag these files onto `Libellus Event Editing Tool.exe`. This will convert the files into a JSON file and place it into a new folder.
 
@@ -48,7 +48,7 @@ and the PM3 will look something like this:
 ![]({%link assets/images/audio/pm3_1.png %})
 
 {: .info }
-> Not all events have BGM calls within their PM2 or PM3 files! If your PM3 file does not have a BGM section, the music may either be called as ambience in the PM2 (ex: Junes theme) or stored in `init.bin/event/cmm.bin/cmmEventBGM.dat`. See the next section if you wish to edit `cmmEventBGM.dat`.
+> Not all events have BGM calls within their PM2 or PM3 files! For P4G, if your PM3 file does not have a BGM section, the music may either be called as ambience in the PM2 (ex: Junes theme) or stored in `init.bin/event/cmm.bin/cmmEventBGM.dat`. See the next section if you wish to edit `cmmEventBGM.dat`.
 
 This looks complicated, but there really are only a few things that actually need to be edited to change music or sound effects. Let's break down the format of this file:
 
@@ -66,8 +66,36 @@ Data for BGM is stored as
 
 where the `XX XX` denotes the BGM ID in hexadecimal. For example, BGM ID 012 (SMILE) would be entered as `0C 00`. For BGM ID 700 (only applicable if using BGME to add new music), that would be entered as `BC 02`.
 
+## Editing BGM timings
+
+`StartFrame` denotes the frame in which the music or audio will start (or end). A frame in P3F and P4G is 1/30 of a second (or 30 frames = 1 second), as the games originally ran at 30 FPS; this is still true for the modern ports of P4G, despite them having a significantly higher maximum framerate.
+
+The PM2 file contains data on when different messages will play. It typically looks like this:
+
+![]({%link assets/images/audio/pm2_msg.png %})
+
+`StartFrame` here similarly indicates when the message is shown. `MessageId` indicates which message is to be shown. By using the [text script dumps](https://drive.google.com/file/d/113DuAlmIqb8AU4xBYNuU5FDxPP3mVX67/view) or extracting the corresponding PM1 event file, you can find which message corresponds to that ID. For example, for `E123_001` in P4G (the scene where Yu/Yosuke/Chie enter the TV for the first time), these are the first two messages corresponding to the message calls shown in the PM2 above.
+
+![]({%link assets/images/audio/p4g_msg.png %})
+
+If you want to start playing a song when Yosuke starts talking, you can simply make a BGM call on that frame! In this case, it would be a `StartFrame` of 70. If you wanted to start music one second after Yosuke starts talking, that would correspond to a `StartFrame` of 100.
+
+{: .info }
+> For messages, the start frame is also typically the end frame to account for message auto advance and voiced dialogue! With the previous example, if you set a `StartFrame` of 71, your music will only start after you advance Yosuke's dialogue.
+
 ## Additional music options
 
+{: .todo }
+> Add information for P3P and P5R. Add more information for P3F if it has multiple music fadeouts.
+
+{% tabs fadeout %}
+{% tab fadeout P3F %}
+To have BGM and other sound effects like ambience fade out, use
+
+```"Data": "00 00 00 00 00 00 00 00 00 00 00 00 06 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00"```
+{% endtab %}
+
+{% tab fadeout P4G %}
 To have BGM and other sound effects like ambience fade out gradually, use
 
 ```"Data": "00 00 00 00 00 00 00 00 00 00 00 00 02 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00"```
@@ -76,10 +104,21 @@ To have BGM and other sound effects like ambience fade out suddenly, use
 
 ```"Data": "00 00 00 00 00 00 00 00 00 00 00 00 03 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00"```
 
-If switching from playing one song to another, P4G defaults to using a sudden fade out of the previous track.
+The Junes theme is treated as ambience, and is called using
+
+```"Data": "00 00 00 00 00 00 00 00 00 00 00 00 3F 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00"```
+
+Music counted as ambience (such as the Junes theme) can be stopped using
+
+```"Data": "00 00 00 00 00 00 00 00 00 00 00 00 0A 00 02 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00"```
+
+{% endtab %}
+{% endtabs %}
+
+If switching from playing one song to another, P3F and P4G default to using a sudden fade out of the previous track.
 
 
-# Editing BGM At Event Start
+# Editing BGM At Event Start (P4G only)
 
 {: .info }
 > It is possible to edit event music fully without editing this file by forcing specific music to play in the PM3 file for the event! However, many events have their music calls stored here, so editing this file can reduce redundancy.

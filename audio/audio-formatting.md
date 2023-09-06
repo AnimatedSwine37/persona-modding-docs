@@ -3,7 +3,7 @@ title: Audio Editing and Formatting
 layout: page
 parent: Audio
 nav_order: 1
-games: ['P3P', 'P4G', 'P5R']
+games: ['P3F', 'P3P', 'P4G', 'P5R']
 ---
 
 ## Tools You'll Need
@@ -18,6 +18,7 @@ games: ['P3P', 'P4G', 'P5R']
 
 The location and format of audio files depends on the game being modded.
 
+- P3F: audio is stored as loose ADX files in `BGM.CVM`.
 - P3P: audio is stored as loose ADX files in `data/umd1.cpk/data/sound`.
 - P4G: audio is stored as HCA files packed within AWB archives in `data.cpk/sound/adx2`. Some AWB archives come in pairs with associated ACB files.
 - P5R: audio is stored as ADX files packed within ACB archives in `sound_e.cpk` for English voices, `sound_j.cpk` for Japanese voices, and `base.cpk/sound` for all other sounds. Some AWB archives come in pairs with associated ACB files.
@@ -43,7 +44,7 @@ Mark down the start and end points somewhere, as you will use them when encoding
 
 Select your desired audio file by clicking on the `...` button to the left of the Encode button. Enable looping by clicking the Loop switch below the Encode button. Under Loop Options, set the switch to Custom Loop, then enter the Start and End points you found earlier (no commas). Additionally, set Quality to High, Encode Quality to Highest, and the codec as follows:
 
-- P3P, P5R: ADX
+- P3F, P3P, P5R: ADX
 - P4G: HCA
 
 Then click Encode and save your encoded audio file with a desired name and location. Note that you need to append the file extension (.ADX or .HCA) in order for the file to function properly.
