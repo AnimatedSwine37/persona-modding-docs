@@ -3,14 +3,18 @@ title: Replacing Existing Audio
 layout: page
 parent: Audio
 nav_order: 2
-games: ['P3P', 'P4G', 'P5R']
+games: ['P3F', 'P3P', 'P4G', 'P5R']
 ---
 
 ## Replacing Audio Normally
 
-If modding P3P on PC, you can simply drag and drop the files in your mod folder. For P4G or P5R on PC, AWB Emulator is the recommended method to replace audio as it allows audio replacement without repacking and distributing the entire sound archive. Documentation on AWB Emulator can be found [here](https://sewer56.dev/FileEmulationFramework/emulators/awb.html).
+If modding P3F or P3P on PC, you can simply drag and drop the files in your mod folder. For P4G or P5R on PC, AWB Emulator is the recommended method to replace audio as it allows audio replacement without repacking and distributing the entire sound archive. Documentation on AWB Emulator can be found [here](https://sewer56.dev/FileEmulationFramework/emulators/awb.html).
 
 {% tabs awbemulator %}
+{% tab awbemulator P3F %}
+Place your audio files in `(mod folder)/BGM`, following the file structure for the original audio file(s). P3P uses ADX files for its audio.
+{% endtab %}
+
 {% tab awbemulator P3P %}
 Place your audio files in `(mod folder)/P5REssentials/(name this whatever)/data/sound`, following the file structure for the original audio file(s). P3P uses ADX files for its audio.
 {% endtab %}
