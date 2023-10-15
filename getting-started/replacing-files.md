@@ -30,3 +30,6 @@ PAK archives can have many different file extensions like `PAK`, `ARC`, and `BIN
 To replace these, open your mod folder as before, but then create a folder named FEmulator. Inside this new folder, make another folder called PAK. Then, in the PAK folder, create a folder with the name of the PAK.
 
 If you noticed while viewing the PAK in Amicitia that your file was named something like battle/effect/z0.tmx, treat everything before z0.tmx like a path, and create folders accordingly. PAKs can also be nested within PAKs; if this happens, just create a folder for the nested PAK and repeat until you get to the file you're actually replacing.
+
+## Other Files
+Certain files in certain games are handled differently (for example, P4G music replacement). These are covered in their own sections.

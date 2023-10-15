@@ -8,7 +8,7 @@ games: ['P3F', 'P3P', 'P4G', 'P5R']
 
 ## Replacing Audio Normally
 
-If modding P3F or P3P on PC, you can simply drag and drop the files in your mod folder. For P4G or P5R on PC, AWB Emulator is the recommended method to replace audio as it allows audio replacement without repacking and distributing the entire sound archive. Documentation on AWB Emulator can be found [here](https://sewer56.dev/FileEmulationFramework/emulators/awb.html).
+If modding P3F or P3P on PC, you can simply [replace the files](/persona-modding-docs/getting-started/replacing-files). For P4G or P5R on PC, AWB Emulator is the recommended method to replace audio as it allows audio replacement without repacking and distributing the entire sound archive. Documentation on AWB Emulator can be found [here](https://sewer56.dev/FileEmulationFramework/emulators/awb.html).
 
 {% tabs awbemulator %}
 {% tab awbemulator P3F %}
@@ -33,10 +33,16 @@ For example, if editing music, the corresponding audio would be placed in `(mod 
 {% endtab %}
 {% endtabs %}
 
+For P4G and P5R, the files should be named according to their streaming ID; the file naming format is `(streaming ID - 1)_(whatever you want here)`.
 
+For example, to replace I'll Face Myself in P4G, find the ID that corresponds to that song. Its BGM ID is 9, which corresponds to a streaming ID of `38`.
 
-{: .todo }
-Make this more specific including file names
+![]({{ site.baseurl }}/assets/images/audio/foobar-example.png)
+
+Therefore, the file could be named anything with `37` in the front, such as but not limited to:
+* `00037_streaming`
+* `37`
+* `037_I_ll_Face_Myself`
 
 ## Repacking an AWB file
 

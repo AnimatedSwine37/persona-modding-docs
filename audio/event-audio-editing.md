@@ -123,7 +123,7 @@ If switching from playing one song to another, P3F and P4G default to using a su
 {: .info }
 > It is possible to edit event music fully without editing this file by forcing specific music to play in the PM3 file for the event! However, many events have their music calls stored here, so editing this file can reduce redundancy.
 
-Many of P4G's events call music at the beginning; this data is stored in `init.bin/event/cmm.bin/cmmEventBGM.dat`. Editing this file requires the use of [010 Editor](https://www.sweetscape.com/010editor/) and [several templates](https://github.com/tge-was-taken/010-Editor-Templates) designed for file types supported by the Persona games. Extract these templates to a separate folder.
+Many of P4G's social link events call music at the beginning; this data is stored in `init.bin/event/cmm.bin/cmmEventBGM.dat`. Editing this file requires the use of [010 Editor](https://www.sweetscape.com/010editor/) and [several templates](https://github.com/tge-was-taken/010-Editor-Templates) designed for file types supported by the Persona games. Extract these templates to a separate folder.
 
 Extract `cmmEventBGM.dat` using Amicitia or Persona Editor, then open it in 010 Editor. By running a template on it, we can use a more readable format. Open a template by clicking the Run Template button, then the Open Template button, or press `Ctrl + F5`.
 
@@ -140,9 +140,6 @@ Expanding the drop downs shows the following data:
 You can change BGMIndex for a given event here to change the music that plays at the beginning. Note that not all events are listed here.
 
 After editing the file, place it in `(mod folder)/FEmulator/PAK/init.bin/event/cmm.bin`, where `init.bin` and `cmm.bin` are folders.
-
-{: .todo }
-> Figure out whether this is BGME compatible
 
 {: .todo }
 > Figure out if it is possible to add more entries for different events that aren't already present
