@@ -1,7 +1,7 @@
 ---
 title: Events
 layout: page
-nav_order: 8
+nav_order: 9
 has_children: true
 games: ['P3F', 'P3P', 'P4G', 'P4G Vita', 'P5R']
 ---
