@@ -9,7 +9,9 @@ games: ['P3F', 'P4G Vita']
 In general your load order should not matter as most file types will be automatically merged by Aemulus, removing potential conflicts. 
 
 {: .info }
-> In Aemulus a mod that is **higher** in the list has a **higher priority**. So, if your mod is first in the list it would take precendence over everything else.
+> In Aemulus by default a mod that is **higher** in the list has a **higher priority**. So, if your mod is first in the list it would take precendence over everything else.
+>
+> This behaviour can be switched so lower in the list means higher priority by clicking the ↕ button in the top right.
 
 ## Is My Load Order Right?
 
