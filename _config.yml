@@ -24,6 +24,9 @@ callouts:
   todo:
     title: To Do
     color: yellow
+  tip:
+    title: Tip
+    color: green
 
 games:
 - short_name: Universal
