@@ -8,10 +8,16 @@ games: ['P3F', 'P4G Vita']
 
 In general your load order should not matter as most file types will be automatically merged by Aemulus, removing potential conflicts. 
 
-{: .info }
-> In Aemulus by default a mod that is **higher** in the list has a **higher priority**. So, if your mod is first in the list it would take precendence over everything else.
->
-> This behaviour can be switched so lower in the list means higher priority by clicking the ↕ button in the top right.
+## How Does Load Order Work?
+By default Aemulus loads mods starting at the bottom and working its way up. That means if two mods edit the same file(s) and Aemulus can't resolve the conflict, a mod higher in the list will take priority.
+
+In the example below, if the Fortune Teller and Dojima's Coffee mods both edited the same file which couldn't be merged, Fortune Teller's file would end up being used as it is higher priority.
+
+![]({%link assets/images/using-mods/aemulus-priority.png %})
+
+The way priority is decided can be reversed by clicking the ↕ button in the top right. When you do this, you'll notice the Package Priority indicator on right of your mod list switches to show priority goes down rather than up.
+
+![]({%link assets/images/using-mods/aemulus-reverse-priority.png %})
 
 ## Is My Load Order Right?
 

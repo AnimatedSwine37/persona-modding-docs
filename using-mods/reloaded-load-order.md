@@ -9,10 +9,14 @@ games: ['P3P', 'P4G', 'P5R']
 In general your load order should not matter as most file types will be automatically merged by Persona Essentials, removing potential conflicts. 
 The only major file types that are not automatically merged currently are BMDs which store messages and SPRs/SPDs which store sprites. 
 
-{: .info }
-> In Reloaded a mod that is **lower** in the list has a **higher priority**. So, if your mod is last in the list it would take precendence over everything else.
-> 
-> When mods use a file emulator to allow automatic merging, it will **always take priority** over any mods that are not formatted for merging. In this case those mods should be updated.
+## How Does Load Order Work?
+Reloaded loads mods starting at the top and working its way down. That means if two mods edit the same file(s) and Persona Essentials can't resolve the conflict, a mod lower in the list will take priority.
+
+In the example below, if the Custom Sub Menu and Detailed Descriptions mods both edited the same file which couldn't be merged, Detailed Descriptions' file would end up being used as it is higher priority.
+
+![]({%link assets/images/using-mods/reloaded-priority.png %})
+
+One exception to this rule is when a mod uses a file emulator to allow automatic merging. In this case it will **always take priority** over any mods that are not formatted for merging. If you notice this, the mods that aren't formatted for merging should be updated.
 
 ## Is My Load Order Right?
 
