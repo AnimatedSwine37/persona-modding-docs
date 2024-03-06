@@ -13,12 +13,9 @@ const pages = [
 ];
 
 const gameNames = {
-    "P4G": "Persona 4 Golden",
-    "P5R": "Persona 5 Royal",
-    "P3P": "Persona 3 Portable",
-    "P3F": "Persona 3 FES",
-    "P4G Vita": "Persona 4 Golden Vita",
-    "Universal": "All Games"
+    {% for game in site.games %}
+    "{{game.short_name}}": "{{game.full_name}}",
+    {% endfor %}
 }
 
 document.addEventListener("DOMContentLoaded", onLoad);

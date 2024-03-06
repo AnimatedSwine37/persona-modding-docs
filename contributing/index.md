@@ -1,7 +1,7 @@
 ---
 title: Contributing
 layout: page
-nav_order: 11
+nav_order: 13
 include_toc: true
 ---
 
@@ -111,6 +111,8 @@ Children have unique orderings, i.e. the main pages (Home, Getting Started, Musi
 
 {% tab front-matter games %}
 A list of games the page applies to. This is used for the filtering from the nav bar.
+
+To see all current games or to add a new one check [Adding A Game](#adding-a-game).
 {% endtab %}
 
 {% endtabs %}
@@ -216,6 +218,25 @@ include_toc: true
 games: ['Universal']
 ---
 ``` 
+
+## Adding A Game
+Currently the following games are supported:
+{% for game in site.games %}
+- {{game.short_name}} ({{game.full_name}})
+{% endfor %}
+
+To add a game you'll need to edit `_config.yml` and add a new entry to the `games` section. For example, to add Persona Q2 you'd add the following:
+
+``` yaml
+- short_name: PQ2 
+  full_name: Persona Q2
+  platform: 3DS
+```
+
+Where the `short_name` is what you'll put in the `games` front matter and the `full_name` is what shows up in the nav bar. The `platform` is currently unused but may be used in the future.
+
+{: .info }
+Note that you'll need to completely restart your Jekyll server for changes to `_config.yml` to take effect (i.e `ctrl+c` to stop it and rerun `bundle exec jekyll serve`)
 
 ## Writing Guidelines
 The aim of this documentation is to be a **practical** guide to modding games, and to be **consistent** throughout. As such, please remember the following when writing your guides:
