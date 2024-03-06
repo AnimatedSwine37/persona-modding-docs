@@ -1,15 +1,10 @@
 ---
-title: P4G PC to Vita
+title: P4G PC to Vita Porting
 layout: page
 nav_order: 5
 has_children: true
 parent: Porting
+games: ['P4G Vita']
 ---
-
-# Porting
-{: .d-inline-block }
-
-Universal
-{: .label .label-green } 
 
 In the following sections we will cover information on porting Persona 4 Golden PC mods to the Vita Version of the game.

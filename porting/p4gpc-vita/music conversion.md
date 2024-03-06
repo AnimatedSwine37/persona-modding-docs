@@ -2,8 +2,9 @@
 title: P4G PC Music to Vita
 layout: page
 nav_order: 5
-parent: P4G PC to Vita
+parent: P4G PC to Vita Porting
 grand_parent: Porting
+games: ['P4G Vita']
 ---
 
 # P4G Vita Music

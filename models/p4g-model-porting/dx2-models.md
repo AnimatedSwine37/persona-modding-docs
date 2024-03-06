@@ -4,6 +4,7 @@ layout: page
 nav_order: 1
 grand_parent: Models
 parent: P4G Model Porting
+games: ['P4G','P4G Vita']
 ---
 
 # 📱 DX2 Models

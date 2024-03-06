@@ -3,8 +3,9 @@ title: P4G PC Videos to Vita
 layout: page
 nav_order: 4
 has_children: false
-parent: P4G PC to Vita
+parent: P4G PC to Vita Porting
 grand_parent: Porting
+games: ['P4G Vita']
 ---
 
 # P4G Vita Videos

@@ -4,11 +4,8 @@ layout: page
 nav_order: 1
 grand_parent: Models
 parent: P4G Model Porting
-include_toc: true
-games: ['P4G']
+games: ['P4G', 'P4G Vita']
 ---
-
-# 👿 SMT V Models
 This guide was written by [Dexxtrip](https://gamebanana.com/members/2225195) on Gamebanana / @bonq.com on Discord.
 
 This guide covers the process of porting Demon designs from Shin Megami Tensei V to Persona 4 Golden. These instructions apply to both the PC and Vita versions unless specified otherwise.

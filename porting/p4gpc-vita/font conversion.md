@@ -2,8 +2,9 @@
 title: P4G PC Fonts to Vita
 layout: page
 nav_order: 5
-parent: P4G PC to Vita
+parent: P4G PC to Vita Porting
 grand_parent: Porting
+games: ['P4G Vita']
 ---
 
 # P4G Vita Fonts
@@ -38,15 +39,15 @@ In the off chance more have been posted since then, go with those. For the remai
 
 First, download your font and open it in Persona Editor, the file should be called font0.fnt. 
 
-![]({{ site.baseurl }}/assets/images/porting/p4gpc-vita/font-conversion/persona editor window.png)
+![]({%link /assets/images/porting/p4gpc-vita/font-conversion/persona editor window.png %})
 
 Once opened, right click the .fnt file and click Save As. In the new window change the file type to PNG.
 
-![]({{ site.baseurl }}/assets/images/porting/p4gpc-vita/font-conversion/save option.png)
+![]({%link /assets/images/porting/p4gpc-vita/font-conversion/save option.png %})
 
 Now, in a photo editor of choice, such as Magick, IMBatch, or Photoshop, resize the image by 50%.
 
-![]({{ site.baseurl }}/assets/images/porting/p4gpc-vita/font-conversion/command.png)
+![]({%link /assets/images/porting/p4gpc-vita/font-conversion/command.png %})
 
 Once resized, navigate to your dumped copy of the game and open init.bin in Persona Editor. 
 
@@ -54,11 +55,7 @@ Extract the font0.fnt file and save it somewhere safe.
 
 Open up the new font file again in Persona Editor, right click it and click Replace, then navigate to the .PNG file you extracted from the original font file. Change the file type to PNG and open it.
 
-After some time, you should notice that the preview on the right changed, like this:
-
-![]({{ site.baseurl }}/assets/images/porting/p4gpc-vita/font-conversion/preview font.png)
-
-![]({{ site.baseurl }}/assets/images/porting/p4gpc-vita/font-conversion/preview font new.png)
+Wait some time for the file to be finished inserting. You'll know when it finishes because the window will refresh.
 
 Half of the work is done, now we need to fix the spacing on the characters.
 
@@ -68,13 +65,13 @@ In Persona Editor, double click on the opened file to open the editor window.
 
 The editor window looks like this:
 
-![]({{ site.baseurl }}/assets/images/porting/p4gpc-vita/font-conversion/persona editor font preview.png)
+![]({%link /assets/images/porting/p4gpc-vita/font-conversion/persona editor font preview.png %})
 
 Now here comes the hard part, you now need to go in and fix the spacing on every necessary character.
 
 A good frame of reference is to align the Left Cut to be touching the most outer light edge of the character, and the Right Cut to be one pixel away from the edge of the character. Like this:
 
-![]({{ site.baseurl }}/assets/images/porting/p4gpc-vita/font-conversion/cut alignment.png)
+![]({%link /assets/images/porting/p4gpc-vita/font-conversion/cut alignment.png %})
 
 Repeat this for every character that appears in the English game.
 
@@ -84,15 +81,15 @@ Once you are finished, we can either move over to testing in game or optionally 
 
 Now, we're going to add an optional package to our P4G Vita build to make testing mods easier. 
 
-[Here]({{ site.baseurl }}/assets/images/porting/p4gpc-vita/font-conversion/FONT TEST.7z) you can download a flowscript mod I made that adds dialogue to the kitchen sink in your house, allowing you to quickly check all characters, as well as how they look in sentences. 
+[Here]({%link /assets/images/porting/p4gpc-vita/font-conversion/FONT TEST.7z %}) you can download a flowscript mod I made that adds dialogue to the kitchen sink in your house, allowing you to quickly check all characters, as well as how they look in sentences. 
 
-![]({{ site.baseurl }}/assets/images/porting/p4gpc-vita/font-conversion/font test tool capital.png)
+![]({%link /assets/images/porting/p4gpc-vita/font-conversion/font test tool capital.png %})
 
-![]({{ site.baseurl }}/assets/images/porting/p4gpc-vita/font-conversion/font test tool lowercase.png)
+![]({%link /assets/images/porting/p4gpc-vita/font-conversion/font test tool lowercase.png %})
 
-![]({{ site.baseurl }}/assets/images/porting/p4gpc-vita/font-conversion/font test dog.png)
+![]({%link /assets/images/porting/p4gpc-vita/font-conversion/font test dog.png %})
 
-![]({{ site.baseurl }}/assets/images/porting/p4gpc-vita/font-conversion/font test quartz.png)
+![]({%link /assets/images/porting/p4gpc-vita/font-conversion/font test quartz.png %})
 
 Once you've got the mod built and tested, let's go over how the mod should and should not perform.
 
@@ -102,21 +99,21 @@ Now that you're in game, let's go over some visual examples.
 
 Broken text like this is indicative of incorrect spacing with font mods. If your text looks like this, make sure you actually saved your spacing changes in Persona Editor before packaging.
 
-![]({{ site.baseurl }}/assets/images/porting/p4gpc-vita/font-conversion/dojima bad example.png)
+![]({%link /assets/images/porting/p4gpc-vita/font-conversion/dojima bad example.png %})
 
-![]({{ site.baseurl }}/assets/images/porting/p4gpc-vita/font-conversion/nanako bad example.png)
+![]({%link /assets/images/porting/p4gpc-vita/font-conversion/nanako bad example.png %})
 
 Correct font spacing looks like this. 
 
 Here I am demonstrating with the Comic Sans font mod that I ported for this tutorial.
 
-![]({{ site.baseurl }}/assets/images/porting/p4gpc-vita/font-conversion/comic sans capital.png)
+![]({%link /assets/images/porting/p4gpc-vita/font-conversion/comic sans capital.png %})
 
-![]({{ site.baseurl }}/assets/images/porting/p4gpc-vita/font-conversion/comic sans lowercase.png)
+![]({%link /assets/images/porting/p4gpc-vita/font-conversion/comic sans lowercase.png %})
 
-![]({{ site.baseurl }}/assets/images/porting/p4gpc-vita/font-conversion/comic sans dog.png)
+![]({%link /assets/images/porting/p4gpc-vita/font-conversion/comic sans dog.png %})
 
-![]({{ site.baseurl }}/assets/images/porting/p4gpc-vita/font-conversion/comic sans quartz.png)
+![]({%link /assets/images/porting/p4gpc-vita/font-conversion/comic sans quartz.png %})
 
 If you've confirmed that your font is working as it should, **congrats!** You've successfully ported a font mod to Persona 4 Golden on Vita.
 
