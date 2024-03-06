@@ -24,3 +24,30 @@ callouts:
   todo:
     title: To Do
     color: yellow
+  tip:
+    title: Tip
+    color: green
+
+games:
+- short_name: Universal
+  full_name: All Games
+
+- short_name: P3P
+  full_name: Persona 3 Portable
+  platform: PC 
+    
+- short_name: P4G
+  full_name: Persona 4 Golden
+  platform: PC 
+    
+- short_name: P5R
+  full_name: Persona 5 Royal
+  platform: PC
+
+- short_name: P4G Vita
+  full_name: Persona 4 Golden Vita
+  platform: Vita
+
+- short_name: P3F 
+  full_name: Persona 3 FES
+  platform: PS2

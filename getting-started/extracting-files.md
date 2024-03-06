@@ -57,6 +57,12 @@ The easiest way to extract files from these archives is [Amicitia](https://githu
 
 ![]({%link assets/images/getting-started/amicitia.png %})
 
+### PersonaEditor GUI
+
+[PersonaEditor](https://github.com/Meloman19/PersonaEditor/releases/tag/1.6) is an alternative program. While Amicitia is preferred in most cases, PersonaEditor is more useful for some file types, and features limited built-in text editing support. It has a similar UI to Amicitia.
+
+![]({%link assets/images/getting-started/personaeditor.png %})
+
 ### Command Line
 Although Amicitia is the most user friendly, it's not good for batch extracting files as you can only select one at a time. If you need to perform batch operations you can download [PackTools](https://github.com/tge-was-taken/AtlusFileSystemLibrary/releases/latest).
 
