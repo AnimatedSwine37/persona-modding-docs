@@ -7,7 +7,6 @@ grand_parent: Porting
 games: ['P4G Vita']
 ---
 
-# P4G Vita Music
 This guide was written by [Dexxtrip](https://gamebanana.com/members/2225195) on Gamebanana / @bonq.com on Discord.
 
 This guide covers the process of porting music mods from Persona 4 Golden on PC to Vita.
