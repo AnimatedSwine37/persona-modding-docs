@@ -7,6 +7,14 @@ backend:
 media_folder: "assets/images/uploads"
 
 collections:
+  - label: "Contributing"
+    name: "contributing"
+    folder: "contributing"
+    create: true
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
+
   - name: getting-started
     label: Getting Started
     label_singular: 'Page'
