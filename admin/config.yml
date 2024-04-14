@@ -7,14 +7,6 @@ backend:
 media_folder: "assets/images/uploads"
 
 collections:
-  - label: "Contributing"
-    name: "contributing"
-    folder: "contributing"
-    create: true
-    fields:
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Body", name: "body", widget: "markdown"}
-
   - name: getting-started
     label: Getting Started
     label_singular: 'Page'
@@ -29,6 +21,49 @@ collections:
       - label: Title
         name: title
         widget: string
+      - label: Games
+        name: games
+        widget: select
+        options: ["Universal", "P3F", "P3P", "P3R", "P4G", "P4G Vita", "P5R"]
+        multiple: true
+        min: 1
+      - label: Layout
+        name: layout
+        widget: hidden
+        default: page
+      - label: Table of Contents
+        name: include_toc
+        widget: boolean
+        default: false
+      - label: Body
+        name: body
+        widget: markdown
+    # adding a meta object with a path property allows editing the path of entries
+    # moving an existing entry will move the entire sub tree of the entry to the new location
+    meta: { path: { widget: string, label: 'Path', index_file: 'index' } }
+
+  - name: contributing
+    label: Contributing
+    label_singular: 'Page'
+    folder: contributing
+    media_folder: assets/images/contributing/{{dirname}}
+    create: true
+    # adding a nested object will show the collection folder structure
+    nested:
+      depth: 5 # max depth to show in the collection tree
+      summary: '{{title}}' # optional summary for a tree node, defaults to the inferred title field
+    fields:
+      - label: Title
+        name: title
+        widget: string
+      - label: Layout
+        name: layout
+        widget: hidden
+        default: page
+      - label: Table of Contents
+        name: include_toc
+        widget: boolean
+        default: false
       - label: Body
         name: body
         widget: markdown
