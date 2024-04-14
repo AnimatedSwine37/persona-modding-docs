@@ -3,7 +3,11 @@ title: Reloaded Load Order
 layout: page
 parent: Using Mods
 nav_order: 1
-games: ['P3P', 'P4G', 'P5R']
+games:
+  - P3P
+  - P4G
+  - P5R
+  - P3R
 ---
 
 In general your load order should not matter as most file types will be automatically merged by Persona Essentials, removing potential conflicts. 
