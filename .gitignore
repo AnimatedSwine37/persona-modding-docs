@@ -10,3 +10,4 @@ _site/
 vendor/
 
 .vs/
+node_modules/

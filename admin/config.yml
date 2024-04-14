@@ -1,3 +1,5 @@
+local_backend: true
+
 backend:
   name: github
   repo: AnimatedSwine37/persona-modding-docs 
@@ -14,8 +16,9 @@ collections:
     label: Getting Started
     label_singular: 'Page'
     folder: getting-started
-    media_folder: assets/images/getting-started/{{dirname}}
+    media_folder: /assets/images/getting-started/{{dirname}}
     create: true
+    format: jekyll
     # adding a nested object will show the collection folder structure
     nested:
       depth: 5 # max depth to show in the collection tree
@@ -38,19 +41,18 @@ collections:
         name: include_toc
         widget: boolean
         default: false
+        required: false
       - label: Body
         name: body
         widget: markdown
-    # adding a meta object with a path property allows editing the path of entries
-    # moving an existing entry will move the entire sub tree of the entry to the new location
-    meta: { path: { widget: string, label: 'Path', index_file: 'index' } }
 
   - name: contributing
     label: Contributing
     label_singular: 'Page'
     folder: contributing
-    media_folder: assets/images/contributing/{{dirname}}
+    media_folder: /assets/images/contributing/{{dirname}}
     create: true
+    format: jekyll
     # adding a nested object will show the collection folder structure
     nested:
       depth: 5 # max depth to show in the collection tree
@@ -70,6 +72,3 @@ collections:
       - label: Body
         name: body
         widget: markdown
-    # adding a meta object with a path property allows editing the path of entries
-    # moving an existing entry will move the entire sub tree of the entry to the new location
-    meta: { path: { widget: string, label: 'Path', index_file: 'index' } }
