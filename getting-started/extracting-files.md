@@ -7,9 +7,10 @@ games:
   - P3P
   - P4G
   - P5R
+  - P3R
 ---
 
-Before nya you start making your mod you'll need to extract the game's base files so you can find what you actually want to edit. 
+Before you start making your mod you'll need to extract the game's base files so you can find what you actually want to edit. 
 
 ## Extracting CPKs
 All of the game's files are stored in a number of CriWare CPK files such as `EN.CPK` and `data_e.cpk`. 
@@ -90,3 +91,53 @@ The final way to extract files is using [PAKPack-Registry](https://github.com/LT
 Now whenever you right-click a file you'll have a **PAKPack** option at the top of the menu which can be used to extract the PAK.
 
 ![]({%link assets/images/getting-started/pak-context.png %})
+
+
+
+
+# Persona 3 Reload
+
+
+P3R is different than all the other Persona games on pc so far, since it uses the Unreal Engine, and uses IO Store
+That means all the data assets are stored in .pak file.
+That means you need the program [Fmodel](https://fmodel.app/) to extract the data
+
+
+### Setting up Fmodel
+
+
+Once you have downloaded Fmodel, extract the exe and run it,
+Now you need to add the P3R game files to the program.
+Go to Directory -> Selector. A pop up window will appear where you can add undetected game.
+Name it P3R and browse to where your .pak files are located.
+This will differ depending on if you have the game on Steam or Gamepass/ where you have installed the game
+The default steam path would be: `C:\Program Files (x86)\Steam\steamapps\common\P3R\P3R\Content\Paks`
+Then you click the blue "+" to add the game to the list
+
+
+![]({%link assets/images/getting-started/fmodel_ebd9hxtt5s.png %})
+
+
+Now P3R should be on your Detected game list. Make sure the engine version is "GAME_UE4_27"
+Click Ok and now Fmodel should load all the files
+Next you need to enter the AES key, since the .pak files are encrypted.
+Go to Directory -> AES
+Then for the Main Static Key you input: `0x92BADFE2921B376069D3DE8541696D230BA06B5E4320084DD34A26D117D2FFEE`
+Click Ok and all the archives on the left should now be green
+Select the loading mode to All
+And click the load button
+Now you got a tree view of all the asset files you can extract and preview
+
+
+![]({%link assets/images/getting-started/fmodel_985mxhyhpn.png %})
+
+
+Now simply browse to an asset you want to extract
+If we browse to `P3R/Content/Xrd777/Characters/Player/PC0001/Models/T_PC0001_C001_00_Col.uasset` and double click it. 
+We can see it is the texture for the MC's outfit. If you right click the asset you get some options how to extract it.
+Since this example is a texture, we'd select Save Texture (.png)
+
+
+These different options is useful depending on what assets you are extracting
+If you want to extract the MC's model then you'd select `SK_PC0001_C001` and then Save Model (.psk)
+
