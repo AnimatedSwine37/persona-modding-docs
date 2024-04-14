@@ -1,5 +1,3 @@
-local_backend: true
-
 backend:
   name: github
   repo: AnimatedSwine37/persona-modding-docs 
@@ -46,7 +44,7 @@ collections:
       - label: Body
         name: body
         widget: markdown
-    meta: { path: { widget: string, label: 'Path', index_file: 'index' } }
+    # meta: { path: { widget: string, label: 'Path', index_file: 'index' } }
 
   - name: getting-started
     label: Getting Started
@@ -81,7 +79,7 @@ collections:
       - label: Body
         name: body
         widget: markdown
-    meta: { path: { widget: string, label: 'Path', index_file: 'index' } }
+    # meta: { path: { widget: string, label: 'Path', index_file: 'index' } }
 
   - name: audio
     label: Audio
@@ -116,7 +114,7 @@ collections:
       - label: Body
         name: body
         widget: markdown
-    meta: { path: { widget: string, label: 'Path', index_file: 'index' } }
+    # meta: { path: { widget: string, label: 'Path', index_file: 'index' } }
 
   - name: videos
     label: Videos
@@ -151,7 +149,7 @@ collections:
       - label: Body
         name: body
         widget: markdown
-    meta: { path: { widget: string, label: 'Path', index_file: 'index' } }
+    # meta: { path: { widget: string, label: 'Path', index_file: 'index' } }
 
   - name: porting
     label: Porting
@@ -186,7 +184,7 @@ collections:
       - label: Body
         name: body
         widget: markdown
-    meta: { path: { widget: string, label: 'Path', index_file: 'index' } }
+    # meta: { path: { widget: string, label: 'Path', index_file: 'index' } }
 
   - name: models
     label: Models
@@ -221,7 +219,7 @@ collections:
       - label: Body
         name: body
         widget: markdown
-    meta: { path: { widget: string, label: 'Path', index_file: 'index' } }
+    # meta: { path: { widget: string, label: 'Path', index_file: 'index' } }
 
   - name: flowscript
     label: Flowscript
@@ -256,7 +254,7 @@ collections:
       - label: Body
         name: body
         widget: markdown
-    meta: { path: { widget: string, label: 'Path', index_file: 'index' } }
+    # meta: { path: { widget: string, label: 'Path', index_file: 'index' } }
 
   - name: text
     label: Text
@@ -291,7 +289,7 @@ collections:
       - label: Body
         name: body
         widget: markdown
-    meta: { path: { widget: string, label: 'Path', index_file: 'index' } }
+    # meta: { path: { widget: string, label: 'Path', index_file: 'index' } }
 
   - name: events
     label: Events
@@ -326,7 +324,7 @@ collections:
       - label: Body
         name: body
         widget: markdown
-    meta: { path: { widget: string, label: 'Path', index_file: 'index' } }
+    # meta: { path: { widget: string, label: 'Path', index_file: 'index' } }
 
   - name: sprites
     label: Sprites
@@ -361,7 +359,7 @@ collections:
       - label: Body
         name: body
         widget: markdown
-    meta: { path: { widget: string, label: 'Path', index_file: 'index' } }
+    # meta: { path: { widget: string, label: 'Path', index_file: 'index' } }
 
   - name: binary
     label: Binary Files
@@ -396,7 +394,7 @@ collections:
       - label: Body
         name: body
         widget: markdown
-    meta: { path: { widget: string, label: 'Path', index_file: 'index' } }
+    # meta: { path: { widget: string, label: 'Path', index_file: 'index' } }
 
   - name: code
     label: Code Mods
@@ -431,7 +429,7 @@ collections:
       - label: Body
         name: body
         widget: markdown
-    meta: { path: { widget: string, label: 'Path', index_file: 'index' } }
+    # meta: { path: { widget: string, label: 'Path', index_file: 'index' } }
 
   - name: contributing
     label: Contributing
