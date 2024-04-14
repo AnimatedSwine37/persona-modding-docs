@@ -1,6 +1,4 @@
 function fromFile(content) {
-    console.log("Running fromFile on")
-    console.log(content)
     // Note that I removed the options object. If stuff breaks maybe add it back
     const result = matter.matter(content, {});
     // in the absent of a body when serializing an entry we use an empty one
@@ -12,9 +10,6 @@ function fromFile(content) {
 }
 
 function toFile(data) {
-    console.log("Running toFile on")
-    console.log(data)
-
     const { body = '', ...meta } = data;
 
     // gray-matter always adds a line break at the end which trips our
