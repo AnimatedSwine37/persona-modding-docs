@@ -55,7 +55,7 @@ bundle exec jekyll serve
 If all went well you can now go to [http://127.0.0.1:4000/persona-modding-docs/](http://127.0.0.1:4000/persona-modding-docs/) in your browser to see the site running locally. 
 
 {: .info }
-> If you get an error that the `ffi` gem could not be found locally, double check that you're using Ruby **3.1.x** by running `ruby -v`. If you're on a newer version please downgrade to 3.1.
+> If you get an error that the `ffi` gem could not be found locally, double check that you're using Ruby **3.2.x** by running `ruby -v`. If you're on a newer version please downgrade to 3.1.
 
 Whenever you change a file from now on, the site will automatically update to reflect the changes although you will have to reload the page.
 
