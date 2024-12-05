@@ -36,7 +36,7 @@ games:
   full_name: Persona 3 Portable
   platform: PC 
     
-  - short_name: P3RE
+- short_name: P3RE
   full_name: Persona 3 Reload
   platform: PC 
     
