@@ -5,4 +5,4 @@ nav_order: 8
 has_children: true
 --- 
 
-In the following sections will eventually be information on editing text I hope.
+The following sections cover editing text assets and other similar assets for Persona games:
