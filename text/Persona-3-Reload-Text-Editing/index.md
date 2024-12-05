@@ -1,5 +1,5 @@
 ---
-title: P3RE Text Editing
+title: Persona 3 Reload Text
 layout: page
 parent: Text
 nav_order: 1
