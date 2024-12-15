@@ -66,10 +66,10 @@ Use the following command in Command Prompt or Windows Powershell to recompile a
 
 V4 Outformat Command:
 ```
-AtlusScriptCompiler <Path to BF_*.flow> -Compile -Library P3RE -Encoding UTF-8 -OutFormat V4
+AtlusScriptCompiler -In <Path to BF_*.flow> -Compile -Library P3RE -Encoding UTF-8 -OutFormat V4
 ```
 
 V4BE Outformat Command:
 ```
-AtlusScriptCompiler <Path to BF_*.flow> -Compile -Library P3RE -Encoding UTF-8 -OutFormat V4BE
+AtlusScriptCompiler -In <Path to BF_*.flow> -Compile -Library P3RE -Encoding UTF-8 -OutFormat V4BE
 ```
