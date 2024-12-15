@@ -36,6 +36,10 @@ games:
   full_name: Persona 3 Portable
   platform: PC 
     
+- short_name: P3RE
+  full_name: Persona 3 Reload
+  platform: PC 
+    
 - short_name: P4G
   full_name: Persona 4 Golden
   platform: PC 
