@@ -18,7 +18,7 @@ games: ['P3RE']
 
 ## Introduction
 
-Flowscripts are responsible for handling logic during gameplay in almost all Persona games and several other Atlus entries. For example, enemy AI, setting and checking flags for displaying dialog, starting scripted battles etc. They are stored in BF_*.uasset files.
+Flowscripts are responsible for handling logic during gameplay in almost all Persona games and several other Atlus entries. For example, enemy AI, setting and checking flags for displaying dialog, starting scripted battles etc. They are stored in BF_*.uasset files. This section will cover decompiling these files so you can modify them.
 
 ## Pre-requisites
 
@@ -30,6 +30,9 @@ There are a couple of options you can go with to decompile flowscripts but gener
 3. [**Atlus Script GUI**](https://github.com/ShrineFox/AtlusScriptGUI) is an alternative to Atlus Script Tools. Although it uses atlus script tools to decompile the scripts it has a user friendly GUI which you can use to decompile the scripts you find via Fmodel. This is the easiest way to decompile flowscripts.
 
 4. [**Atlus Script Tools Cli**](https://github.com/tge-was-taken/Atlus-Script-Tools) is the tool you should use if you have experience working in command prompt/powershell and need to decompile BF files that you find via Fmodel.
+
+{: .info }
+>After installing Atlus Script Tools it is recommended that you add the program to your systems PATH so it can be accessed from any folder.
 
 ## Decompiling FlowScripts
 
@@ -47,24 +50,32 @@ There are a couple of options you can go with to decompile flowscripts but gener
 
 ### Using Atlus Script GUI
 
+{: .warning }
+>Flowscripts can be decompiled using 2 different Outformats V4BE and V4. To figure out which one you need to try any one of them and if you get any errors during decompilation try the other outformat. 
+>Be sure to note down what format you used (V4/V4BE) to decompile the file as that will be required when you try to recompile it.
+
 1. After installing Atlus Script GUI (Must be a newer version than v3.5). Launch the app and on the top right corner click on game and then select Persona 3 Reload from the list.
 
-2. Now drag any BF_*.uasset file over the "Drag a .BF or .BMD to decompile" box.
+2. Now drag any BF_*.uasset file over the "Drag a .BF or .BMD to Decompile" box. It will now try to decompile the file using the V4 OutFormat if the Big Endian .FLOW Option isn' enabled.
+
+3. If decompilation fails then click on Options and then on Big Endian .FLOW (P3RE). There should now be a checkmark next to it. Now the app will try to decompile the file using the V4BE OutFormat.
 
 ![]({%link assets/images/flowscript/p3re-pc/AtlusScriptGuiGameSetting.png %})
 
 ### Using Atlus Script Tools Cli
-After installing Atlus Script Tools (It is recommended that you add the program to your systems PATH so it can be accessed from any folder but not required.) use the following command to decompile a BF_*.uasset file.
 
 {: .warning }
->Flowscripts can be decompiled using 2 different Outformats V4BE and V4. To figure out which one you need to try any one of them and if you get any errors during decompilation try the other outformat.
+>Flowscripts can be decompiled using 2 different Outformats V4BE and V4. To figure out which one you need to try any one of them and if you get any errors during decompilation try the other outformat. 
+>Be sure to note down what format you used (V4/V4BE) to decompile the file as that will be required when you try to recompile it.
+
+Use the following command in Command Prompt or Windows Powershellto decompile a BF_*.uasset file.
 
 V4 Outformat Command:
 ```
-AtlusScriptCompiler <Path to BF_*.uasset> -Decompile -Library P3RE -Encoding UTF-8 -OutFormat V4
+AtlusScriptCompiler -In <Path to BF_*.uasset> -InFormat FlowscriptBinary -Decompile -Library P3RE -Encoding UTF-8 -OutFormat V4
 ```
 
 V4BE Outformat Command:
 ```
-AtlusScriptCompiler <Path to BF_*.uasset> -Decompile -Library P3RE -Encoding UTF-8 -OutFormat V4BE
+AtlusScriptCompiler -In <Path to BF_*.uasset> -InFormat FlowscriptBinary -Decompile -Library P3RE -Encoding UTF-8 -OutFormat V4BE
 ```
