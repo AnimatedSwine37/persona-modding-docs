@@ -6,6 +6,9 @@ color_scheme: dark
 url: https://animatedswine37.github.io
 baseurl: /persona-modding-docs
 
+prose:
+  siteurl: https://animatedswine37.github.io/persona-modding-docs/
+
 plugins: 
   - jekyll-tabs
 
