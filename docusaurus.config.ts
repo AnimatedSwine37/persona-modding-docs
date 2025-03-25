@@ -10,14 +10,14 @@ const config: Config = {
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://thebestastronot.github.io',
+  url: 'https://animatedswine37.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/persona-modding-docs/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'TheBestAstroNOT', // Usually your GitHub org/user name.
+  organizationName: 'AnimatedSwine37', // Usually your GitHub org/user name.
   projectName: 'persona-modding-docs', // Usually your repo name.
 
   onBrokenLinks: 'throw',
@@ -40,7 +40,7 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/TheBestAstroNOT/persona-modding-docs/edit/main/',
+            'https://github.com/AnimatedSwine37/persona-modding-docs/edit/main/',
         },
         blog: false,
         theme: {
