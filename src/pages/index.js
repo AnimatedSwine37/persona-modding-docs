@@ -1,9 +1,7 @@
-import type { ReactNode } from "react";
 import clsx from "clsx";
 import Link from "@docusaurus/Link";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Layout from "@theme/Layout";
-import HomepageFeatures from "@site/src/components/HomepageFeatures";
 import Heading from "@theme/Heading";
 import React, { useEffect, useState } from "react";
 
@@ -65,9 +63,9 @@ function Contributors() {
   );
 }
 
-export default function Home(): ReactNode {
+export default function Home() {
   return (
-    <Layout title="Persona Modding Docs" description="Description will go into a meta tag in <head />">
+    <Layout title="Persona Modding Docs" description="The Persona Modding Docs">
       <HomepageHeader />
       <main>
         <Contributors />
