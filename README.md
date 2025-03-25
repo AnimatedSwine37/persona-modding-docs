@@ -1,3 +1,6 @@
+# IMPORTANT NOTE
+The repository is currently being transitioned to Docusaurus, the transition is not yet complete so be careful while making changes.
+
 # just-the-docs-template
 
 This is a *bare-minimum* template to create a [Jekyll] site that:
