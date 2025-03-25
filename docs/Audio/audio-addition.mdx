@@ -1,6 +1,8 @@
 ---
 title: Adding New Music
 ---
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 ## Tools You'll Need
 - [Phos Music Manager](https://github.com/T-PoseRatkechi/phos-music-manager/releases)
@@ -28,9 +30,6 @@ There are two main ways to add new music in Persona games.
 
 - [Phos Music Manager](https://github.com/T-PoseRatkechi/phos-music-manager/releases) is a music manager designed to simplify music replacement or addition in Persona 3 Portable (PC), Persona 4 Golden (PC x64), and Persona 5 Royal (PC). It automatically handles all steps needed to encode and export music.
 - If you would rather manually add new music files, [AtomEncd](https://drive.google.com/file/d/1Jx9NBu40XUcJb0U4MdsVjPV84UTzWcpy/view) should be used instead.
-
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
 
 <Tabs>
   <TabItem value="phos" label="Phos Music Manager">
@@ -77,7 +76,7 @@ The encoder should be set to HCA.
 The output path should be set to `FEmulator/AWB/BGM_42.AWB/songID.ADX`, where `songID.ADX` is the ID of the new track you are adding. Use IDs ranging from 0 up to 9999 for new music.
 
 ### Encoder
-The encoder should be set to ADX (Persona 5 Royal PC). If you do not have this option, follow [this guideDISABLED]audio-replacement#p5r-adx-encryption to install it.
+The encoder should be set to ADX (Persona 5 Royal PC). If you do not have this option, follow [this](./audio-replacement#p5r-adx-encryption) to install it.
 
   </TabItem>
 
@@ -101,7 +100,7 @@ The encoder should be set to ADX.
   <TabItem value="manual" label="Manual (AtomEncd)">
 
 ## Encoding Music
-Follow the process to LINK DISABLED REPLACE replace audio using AtomEncd audio-replacement#encoding-audio-with-atomencd.
+Follow the process to [replace audio using AtomEncd](./audio-replacement#encoding-audio-with-atomencd).
 
 ## Adding Music to your Mod
 Audio files should be placed in the proper directory depending on what game you are modding.
@@ -139,4 +138,4 @@ Using IDs larger than 1000 is recommended to avoid crashes.
 
 ## Using New Music
 
-New music can be used right away in [events](../Events/events.mdx) and [flowscript](../Flowscripts/flowscript.mdx) by calling their IDs. To change battle music using BGME, follow [the guide here](./battle-music.mdx).
+New music can be used right away in [events](../events/events.mdx) and [flowscript](../flowscript/flowscript.mdx) by calling their IDs. To change battle music using BGME, follow [the guide here](./battle-music.mdx).
